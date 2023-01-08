@@ -314,7 +314,7 @@ Section:NewButton("hack truy cập file game", "chỉnh sửa ít thôi ko la
     loadstring(game:HttpGetAsync("https://pastebin.com/raw/fPP8bZ8Z"))()
 end)
 --credit
-local Tab = Window:NewTab("Game Pass Giá Rẻ")
+local Tab = Window:NewTab("Robux Giá Rẻ")
 local Section = Tab:NewSection("Link Mua Game Pass Gía Rẻ ↓↓↓ ")
 Section:NewButton("Facebook Nguyễn An ", "bấm vào để copy", function()
     setclipboard("https://www.facebook.com/nguyenanutgr/")
