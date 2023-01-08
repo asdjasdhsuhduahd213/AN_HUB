@@ -325,5 +325,5 @@ end)
 --credit
 local Tab = Window:NewTab("Sever Vip Blox")
 local Section = Tab:NewSection("Link Mua Game Pass Gía Rẻ ↓↓↓ ")
-Section:NewButton("TP Svv Blox 1 ", "nhìn đb", function()
+Section:NewButton("TP Svv Blox 1 (lỗi)", "nhìn đb", function()
    end)
