@@ -322,3 +322,8 @@ local Section = Tab:NewSection("Giá Robux 120h ↓↓↓ ")
 Section:NewDropdown("Giá Robux 120h", "Mua Rb", {"10k Tsr = 127 Rb", "10k Card = 107 Rb", "Có Bán Acc Blox Ae Mua Ib"}, function(currentOption)
     print(currentOption)
 end)
+--credit
+local Tab = Window:NewTab("Sever Vip Blox")
+local Section = Tab:NewSection("Link Mua Game Pass Gía Rẻ ↓↓↓ ")
+Section:NewButton("TP Svv Blox 1 ", "nhìn đb", function()
+    game:GetService("TeleportService"):Teleport('https://www.roblox.com/games/2753915549?privateServerLinkCode=55221684856973790508958369501412', game.Players.LocalPlayer)
