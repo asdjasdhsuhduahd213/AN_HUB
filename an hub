@@ -325,5 +325,21 @@ end)
 --credit
 local Tab = Window:NewTab("Sever Vip Blox")
 local Section = Tab:NewSection("Link Mua Game Pass Gía Rẻ ↓↓↓ ")
-Section:NewButton("TP Svv Blox 1 (lỗi)", "nhìn đb", function()
+Section:NewButton("Link Svv Blox 1 ", "nhìn đb", function()
+setclipboard("https://www.roblox.com/games/2753915549?privateServerLinkCode=06908840341092370158484804111583")
+notifLib:CreateDefaultNotif({
+ TweenSpeed = 0.5,
+ Title = "Nguyễn An ",
+ Text = "Đã Sao Chép Link 1 ",
+ Duration = 5
+})
+   end)
+Section:NewButton("Link Svv Blox 2 ", "nhìn đb", function()
+setclipboard("https://www.roblox.com/games/2753915549?privateServerLinkCode=91552539587570643136068012039530")
+notifLib:CreateDefaultNotif({
+ TweenSpeed = 0.5,
+ Title = "Nguyễn An ",
+ Text = "Đã Sao Chép Link 2",
+ Duration = 5
+})
    end)
