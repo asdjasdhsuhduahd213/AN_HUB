@@ -324,7 +324,7 @@ Section:NewDropdown("Giá Robux 120h", "Mua Rb", {"10k Tsr = 127 Rb", "10k Card
 end)
 --credit
 local Tab = Window:NewTab("Sever Vip Blox")
-local Section = Tab:NewSection("Link Mua Game Pass Gía Rẻ ↓↓↓ ")
+local Section = Tab:NewSection("Sever Vip free ")
 Section:NewButton("Link Svv Blox 1 ", "nhìn đb", function()
 setclipboard("https://www.roblox.com/games/2753915549?privateServerLinkCode=06908840341092370158484804111583")
 notifLib:CreateDefaultNotif({
