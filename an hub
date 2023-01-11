@@ -318,12 +318,12 @@ notifLib:CreateDefaultNotif({
 })
 
 end)
-local Section = Tab:NewSection("Game Pass Blox ↓↓↓ ")
-Section:NewDropdown("Giá Game Pass Blox", "Mua Rb", {"10k Tsr = 137 Rb", "10k Card = 117 Rb", "Có Bán Acc Blox Ae Mua Ib",} function(currentOption)
+local Section = Tab:NewSection("Giá Robux 120h ↓↓↓")
+Section:NewDropdown("Giá Game Pass Blox", "Mua Rb", {"10k Tsr = 137 Rb", "10k Card = 117 Rb", "Có Bán Acc Blox Ae Mua Ib"}, function(currentOption)
     print(currentOption)
 end)
-local Section = Tab:NewSection("Giá Robux 120h ↓↓↓ ")
-Section:NewDropdown("Giá Robux 120h", "Mua Rb", {"X2 Drop = 27k ví ( 350 Robux )", "thuyền nhanh = 27k ví ( 350 Robux )", "+1 Slot Fruit = 30k ví ( 400 Robux )", "X2 Beli = 35k ví ( 450 Robux )", "X2 Masteri = 35k ví ( 450 Robux )", "Yoru = 90k ví ( 1200 robux )", "Tìm fruit = 280k ví ( 3700 Robux )" } function(currentOption)
+local Section = Tab:NewSection("Game Pass Blox ↓↓↓")
+Section:NewDropdown("Giá Robux 120h", "Mua Rb", {"X2 Drop = 27k ví ( 350 Robux )", "thuyền nhanh = 27k ví ( 350 Robux )", "+1 Slot Fruit = 30k ví ( 400 Robux )", "X2 Beli = 35k ví ( 450 Robux )", "X2 Masteri = 35k ví ( 450 Robux )", "Yoru = 90k ví ( 1200 robux )", "Tìm fruit = 280k ví ( 3700 Robux )"}, function(currentOption)
     print(currentOption)
 end)
 --credit
