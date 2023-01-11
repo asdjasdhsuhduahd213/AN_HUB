@@ -382,6 +382,8 @@ notifLib:CreateDefaultNotif({
  Duration = 5
 })
    end)
+   local Tab = Window:NewTab("Freee Robux")
+local Section = Tab:NewSection(" ↓↓↓ ")
 Section:NewButton("Free Robux", "hehe boy", function()
  game.Players.localPlayer:kick("CÚT")
     game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
