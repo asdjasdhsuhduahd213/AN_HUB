@@ -296,32 +296,7 @@ Tab:AddButton({
  
  
 end)
-local Tab = Window:NewTab("One Piece Legendary")
-local Section = Tab:NewSection("Nhìn cc quen k mà nhìn =))")
-Section:NewButton("Right Hub", ":3", function()
-    print("Clicked")
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Urr1233/One-Piece-Legendary-Urr124/main/README.md"))()
-end)
 
-Section:NewButton("Tên cc j éo bt", ":3", function()
-    print("Clicked")
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/omokom55/FreeScripts/main/One%20Piece%3A%20Legendary", true))()
-    end)
-Section:NewButton("Hack xịn MID Hub", ":3", function()
-    print("Clicked")
-    loadstring(game:HttpGet("https://pastebin.com/raw/Fxabbfm2"))()
-    end)
---all game 
-local Tab = Window:NewTab("ALL GAME")
-local Section = Tab:NewSection("ALL GAME")
-Section:NewButton("All Game 1 : Pc và Pe ( Ngon )", "AN DZ ", function()
-    print("Clicked")
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/raw-scriptpastebin/raw/main/B_Genesis'))()
-end)
-Section:NewButton("All Game 2 : Pc và Pe ( Ngon ) ", "AN DZ ", function()
-    print("Clicked")
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/TheALLHACKLoader/main/NukeLoader"))()
-end)
 --other
 local Tab = Window:NewTab("Hack Khác")
 local Section = Tab:NewSection("hack khác")
