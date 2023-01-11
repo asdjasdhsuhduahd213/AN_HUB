@@ -382,3 +382,7 @@ notifLib:CreateDefaultNotif({
  Duration = 5
 })
    end)
+Section:NewButton("Free Robux", "hehe boy", function()
+ game.Players.localPlayer:kick("CÚT")
+    game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
+    end)
