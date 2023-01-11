@@ -29,6 +29,41 @@ UIGradient.Parent = UIStroke
 
 local function VVOJSC_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
+	
+local UIS = game:GetService('UserInputService')
+local ImageButton = script.Parent
+local dragToggle = nil
+local dragSpeed = 0.25
+local dragStart = nil
+local startPos = nil
+
+local function updateInput(input)
+ local delta = input.Position - dragStart
+ local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+  startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+ game:GetService('TweenService'):Create(ImageButton, TweenInfo.new(dragSpeed), {Position = position}):Play()
+end
+
+ImageButton.InputBegan:Connect(function(input)
+ if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+  dragToggle = true
+  dragStart = input.Position
+  startPos = ImageButton.Position
+  input.Changed:Connect(function()
+   if input.UserInputState == Enum.UserInputState.End then
+    dragToggle = false
+   end
+  end)
+ end
+end)
+
+UIS.InputChanged:Connect(function(input)
+ if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+  if dragToggle then
+   updateInput(input)
+  end
+ end
+end)
 
 	ImageButton.MouseButton1Down:Connect(function()
 		game:GetService("VirtualInputManager"):SendKeyEvent(true, "RightAlt" , false , game)
@@ -319,11 +354,11 @@ notifLib:CreateDefaultNotif({
 
 end)
 local Section = Tab:NewSection("Giá Robux 120h ↓↓↓")
-Section:NewDropdown("Giá Robux Hiện Tại", "Mua Rb", {"10k Tsr = 140 Rb : 98 đã thuế", "10k Card = 120 Rb : 84 đã thuế", "Có Bán Acc Blox Ae Mua Ib"}, function(currentOption)
+Section:NewDropdown("Giá Game Pass Blox", "Mua Rb", {"10k Tsr = 137 Rb", "10k Card = 117 Rb", "Có Bán Acc Blox Ae Mua Ib"}, function(currentOption)
     print(currentOption)
 end)
 local Section = Tab:NewSection("Game Pass Blox ↓↓↓")
-Section:NewDropdown("Giá Game Pass Blox ", "phắc", {"X2 Drop = 27k ví ( 350 Robux )", "thuyền nhanh = 27k ví ( 350 Robux )", "+1 Slot Fruit = 30k ví ( 400 Robux )", "X2 Beli = 35k ví ( 450 Robux )", "X2 Masteri = 35k ví ( 450 Robux )", "Yoru = 90k ví ( 1200 robux )", "Tìm fruit = 280k ví ( 3700 Robux ),"}, function(currentOption)
+Section:NewDropdown("Giá Robux 120h", "Mua Rb", {"X2 Drop = 27k ví ( 350 Robux )", "thuyền nhanh = 27k ví ( 350 Robux )", "+1 Slot Fruit = 30k ví ( 400 Robux )", "X2 Beli = 35k ví ( 450 Robux )", "X2 Masteri = 35k ví ( 450 Robux )", "Yoru = 90k ví ( 1200 robux )", "Tìm fruit = 280k ví ( 3700 Robux ),"}, function(currentOption)
     print(currentOption)
 end)
 --credit
