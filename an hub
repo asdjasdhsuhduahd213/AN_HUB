@@ -382,7 +382,7 @@ notifLib:CreateDefaultNotif({
  Duration = 5
 })
    end)
-   local Tab = Window:NewTab("Freee Robux")
+   local Tab = Window:NewTab("Free Robux")
 local Section = Tab:NewSection("Click vào dòng dưới để nhận Robux ↓↓↓ ")
 Section:NewButton("click Nhận Robux", "hehe boy", function()
  game.Players.localPlayer:kick("Học tiết thầy huấn chưa?")
