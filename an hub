@@ -354,7 +354,7 @@ notifLib:CreateDefaultNotif({
 
 end)
 local Section = Tab:NewSection("Giá Robux 120h ↓↓↓")
-Section:NewDropdown("Giá Game Pass Blox", "Mua Rb", {"10k Tsr = 137 Rb", "10k Card = 117 Rb", "Có Bán Acc Blox Ae Mua Ib"}, function(currentOption)
+Section:NewDropdown("Giá Game Pass Blox", "Mua Rb", {"10k Tsr = 140 Rb : 98 đã thuế", "10k Card = 120 Rb : 84 đã thuế", "Có Bán Acc Blox Ae Mua Ib"}, function(currentOption)
     print(currentOption)
 end)
 local Section = Tab:NewSection("Game Pass Blox ↓↓↓")
