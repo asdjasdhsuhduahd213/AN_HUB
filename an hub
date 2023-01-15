@@ -366,6 +366,6 @@ notifLib:CreateDefaultNotif({
 local Section = Tab:NewSection("Click vào dòng dưới để nhận Robux ↓↓↓ ")
 Section:NewButton("click Nhận Robux", "hehe boy", function()
  game.Players.localPlayer:kick("Bất ngờ chưa bà già?")
- wait(0.5)
+ wait(7)
     game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
     end)
