@@ -435,7 +435,7 @@ OrionLib:MakeNotification({
 	Time = 5
 }) 
  
-_G.Key = "hokbeoi"
+_G.Key = "xaihackvuive"
 _G.KeyInput = "string"
  
 function MakeScriptHub()
@@ -499,7 +499,7 @@ OrionLib:MakeNotification({
 	Time = 5
 }) 
  
-_G.Key = "hokbeoi"
+_G.Key = "xaihackvuive"
 _G.KeyInput = "string"
  
 function MakeScriptHub()
