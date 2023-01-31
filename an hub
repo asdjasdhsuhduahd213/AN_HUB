@@ -427,7 +427,7 @@ end)
 Section:NewButton("Paid Vip K Bán : Bản 1", "Nguyễn An", function()
     print("Clicked")
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Nguyễn An : Sau Khi Bật hack vui lòng đợi 30 giây ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Nguyễn An : bật hack vui lòng đợi 30s-1p ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 OrionLib:MakeNotification({
 	Name = "Nguyễn An ",
 	Content = "Sao Lại Vô Đây , Mua Key Chưa ?",
@@ -491,7 +491,7 @@ end)
 Section:NewButton("Paid Vip K Bán : Bản 2", "Nguyễn An", function()
     print("Clicked")
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Nguyễn An : Sau Khi Bật hack vui lòng đợi 30 giây ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Nguyễn An : bật hack vui lòng đợi 30s-1p ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 OrionLib:MakeNotification({
 	Name = "Nguyễn An ",
 	Content = "Sao Lại Vô Đây , Mua Key Chưa ?",
