@@ -81,8 +81,32 @@ local function DCLSA_fake_script() -- UIGradient.LocalScript
 	
 end
 coroutine.wrap(DCLSA_fake_script)()
+  function two(gotoCFrame) --- Tween
+      pcall(function()
+          game.Players.LocalPlayer.Character.Humanoid.Sit = false
+          game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+      end)
+      if (game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.Position - gotoCFrame.Position).Magnitude <= 200 then
+          pcall(function() 
+              tweenz:Cancel()
+          end)
+          game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.CFrame = gotoCFrame
+      else
+          local tween_s = game:service"TweenService"
+          local info = TweenInfo.new((game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.Position - gotoCFrame.Position).Magnitude/325, Enum.EasingStyle.Linear)
+           tween, err = pcall(function()
+              tweenz = tween_s:Create(game.Players.LocalPlayer.Character["HumanoidRootPart"], info, {CFrame = gotoCFrame})
+              tweenz:Play()
+          end)
+          if not tween then return err end
+      end
+      function _TweenCanCle()
+          tweenz:Cancel()
+      end
+  
+end
 
-
+game.Players.LocalPlayer.Name = 0000000000
 local notifLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Notification%20Library/main.lua"))()
 local Library = loadstring(game:HttpGet("https://pastebin.com/raw/XwwTN7w6"))()
 local Window = Library.CreateLib("Nguyễn An", "BloodTheme")
@@ -106,13 +130,43 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
     Icon = "rbxthumb://type=Asset&id=11749957186&w=150&h=150"})
     Duration = 5;
 --test
+
 local Tab = Window:NewTab("Blox Fruit")
 local Section = Tab:NewSection("Blox Fruit")
-Section:NewButton("MuKuRo v1 : Pc (Bản Ngon Nhất Pc )", "Nguyễn An", function()
+
+Section:NewButton("An_Hub Pc : Pe ( Ngon ) ", "Nguyễn An", function()
+    print("Clicked")
+loadstring(game:HttpGet"https://raw.githubusercontent.com/Andzvcll/AN_HUB/main/blox")()
+end)
+
+Section:NewButton("Mukuro v2 :Pc ( Fram Ngon ) ", "Nguyễn An", function()
+    print("Clicked")
+loadstring(game:HttpGet"https://raw.githubusercontent.com/xDepressionx/Free-Script/main/AllScript.lua")()
+end)
+
+Section:NewButton("Maru X : Mobile ( fake ) ", "Nguyễn An", function()
+    print("Clicked")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/joi-droid/MaruHubBF/main/GOHANSSJ3"))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Andzvcll/Andzvcll/main/click%20hitbot'))()
+end)
+
+Section:NewButton("Zen Hub :( click link lấy key nhanh )", "Nguyễn An", function()
+    print("Clicked")
+setclipboard('https://pandatechnology.xyz/getkey?service=zenhub&hwid=1339719223_MOBILE&token=cfe54e25c6642d4d12960f6d42298e0658bd714108e9982c3b6e332c5eaa971f18aaffd4372022eb94e46f58831190c0')
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kaizenofficiall/ZenHub/main/Loader"))()
+end)
+
+Section:NewButton("MuKuRo v1 : Pc ( xài cũng đc )", "Nguyễn An", function()
     print("Clicked")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xQuartyx/DonateMe/main/OldBf"))()
 end)
-Section:NewButton("Zaque Hub : Pc và Pe (Bản Máy yếu )", "Nguyễn An", function()
+
+Section:NewButton("Speed Hub x : Pc ", "Nguyễn An", function()
+    print("Clicked")
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ahmadsgamer2/Script--Game/main/Script%20Game"))()
+end)
+
+Section:NewButton("Zaque Hub : Pc và Pe", "Nguyễn An", function()
     print("Clicked")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Mei2232/ZaqueHub/main/Zaque%20Hub"))()
 end)
@@ -122,281 +176,23 @@ Section:NewButton("NEVA HUB : Pc và Pe", "Nguyễn An", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/VEZ2/NEVAHUB/main/2'))()
 end)
 
-Section:NewButton("BLACKTRAP : Pc và Pe ( ổn )", "Nguyễn An", function()
-    print("Clicked")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Sky2836/BT/main/BYPASS/BLACKTRAP"))()
-end)
  
 Section:NewButton("Hoho hub : Pc và Pe", "Nguyễn An", function()
     print("Clicked")
 loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
 end)
-Section:NewButton("Evo X Hub : Pc và Pe", "Nguyễn An", function()
-    print("Clicked")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/2"))()
-end)
+
 Section:NewButton("Auto Chest (Vip) : Pc và Pe", "Nguyễn An", function()
     print("Clicked")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
 end)
-Section:NewButton("Fix Lag : Pc và Pe", "Nguyễn An", function()
-    print("Clicked")
-local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
-local g = game
-local w = g.Workspace
-local l = g.Lighting
-local t = w.Terrain
-t.WaterWaveSize = 0
-t.WaterWaveSpeed = 0
-t.WaterReflectance = 0
-t.WaterTransparency = 0
-l.GlobalShadows = false
-l.FogEnd = 9e9
-l.Brightness = 0
-settings().Rendering.QualityLevel = "Level01"
-for i, v in pairs(g:GetDescendants()) do
-    if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
-        v.Material = "Plastic"
-        v.Reflectance = 0
-    elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
-        v.Transparency = 1
-    elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
-        v.Lifetime = NumberRange.new(0)
-    elseif v:IsA("Explosion") then
-        v.BlastPressure = 1
-        v.BlastRadius = 1
-    elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") then
-        v.Enabled = false
-    elseif v:IsA("MeshPart") then
-        v.Material = "Plastic"
-        v.Reflectance = 0
-        v.TextureID = 10385902758728957
-    end
-end
-for i, e in pairs(l:GetChildren()) do
-    if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
-        e.Enabled = false
-    end
-end
 
-end)
 Section:NewButton("Show acc ", "Nguyễn An", function()
     print("Clicked")
 loadstring(game:HttpGet("https://pastebin.com/raw/zcFd20tT"))()
 end)
 Section:NewButton("auto click có hitbox", "bật rùi là ko dừng lại dc", function()
- _G.FastAttackNormalSpeed = true
-            
-            local SeraphFrame = debug.getupvalues(require(game:GetService("Players").LocalPlayer.PlayerScripts:WaitForChild("CombatFramework")))[2]
-            local VirtualUser = game:GetService('VirtualUser')
-            local RigControllerR = debug.getupvalues(require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework.RigController))[2]
-            local Client = game:GetService("Players").LocalPlayer
-            local DMG = require(Client.PlayerScripts.CombatFramework.Particle.Damage)
-            
-            function SeraphFuckWeapon() 
-                local p13 = SeraphFrame.activeController
-                local wea = p13.blades[1]
-                if not wea then return end
-                while wea.Parent~=game.Players.LocalPlayer.Character do wea=wea.Parent end
-                return wea
-            end
-            
-            function getHits(Size)
-                local Hits = {}
-                local Enemies = workspace.Enemies:GetChildren()
-                local Characters = workspace.Characters:GetChildren()
-                for i=1,#Enemies do local v = Enemies[i]
-                    local Human = v:FindFirstChildOfClass("Humanoid")
-                    if Human and Human.RootPart and Human.Health > 0 and game.Players.LocalPlayer:DistanceFromCharacter(Human.RootPart.Position) < Size+5 then
-                        table.insert(Hits,Human.RootPart)
-                    end
-                end
-                for i=1,#Characters do local v = Characters[i]
-                    if v ~= game.Players.LocalPlayer.Character then
-                        local Human = v:FindFirstChildOfClass("Humanoid")
-                        if Human and Human.RootPart and Human.Health > 0 and game.Players.LocalPlayer:DistanceFromCharacter(Human.RootPart.Position) < Size+5 then
-                            table.insert(Hits,Human.RootPart)
-                        end
-                    end
-                end
-                return Hits
-            end
-            
-            task.spawn(
-                function()
-                while wait(0) do
-                    if  _G.FastAttackNormalSpeed then
-                        if SeraphFrame.activeController then
-                            -- if v.Humanoid.Health > 0 then
-                                SeraphFrame.activeController.timeToNextAttack = 0
-                                SeraphFrame.activeController.focusStart = 0
-                                SeraphFrame.activeController.hitboxMagnitude = 1000
-                                SeraphFrame.activeController.humanoid.AutoRotate = true
-                                SeraphFrame.activeController.increment = 1 + 1 / 1
-                            -- end
-                        end
-                    end
-                end
-            end)
-            
-            function Boost()
-                spawn(function()
-                game:GetService("ReplicatedStorage").RigControllerEvent:FireServer("weaponChange",tostring(SeraphFuckWeapon()))
-                end)
-            end
-            
-            function Unboost()
-                spawn(function()
-                    game:GetService("ReplicatedStorage").RigControllerEvent:FireServer("unequipWeapon",tostring(SeraphFuckWeapon()))
-                end)
-            end
-            
-            local cdnormal = 0.1
-            local Animation = Instance.new("Animation")
-            local CooldownFastAttack = 0.1
-            Attack = function()
-                local ac = SeraphFrame.activeController
-                if ac and ac.equipped then
-                    task.spawn(
-                        function()
-                        if tick() - cdnormal > 0.1 then
-                            ac:attack()
-                            cdnormal = tick()
-                        else
-                            -- Animation.AnimationId = ac.anims.basic[2]
-                            -- ac.humanoid:LoadAnimation(Animation):Play(1, 1)
-                            game:GetService("ReplicatedStorage").RigControllerEvent:FireServer("hit", getHits(120), 2, "")
-                        end
-                    end)
-                end
-            end
-            
-            b = tick()
-            spawn(function()
-                while wait(.2) do
-                    if  _G.FastAttackNormalSpeed then
-                        if b - tick() > 0.1 then
-                            wait(.2)
-                            b = tick()
-                        end
-                        pcall(function()
-                            for i, v in pairs(game.Workspace.Enemies:GetChildren()) do
-                                if v.Humanoid.Health > 0 then
-                                    if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60.9 then
-                                        Attack()
-                                        wait(.2)
-                                        Boost()
-                                    end
-                                end
-                            end
-                        end)
-                    end
-                end
-            end)
-            
-            k = tick()
-            spawn(function()
-                while wait(0.1) do
-                    if  _G.FastAttackNormalSpeed then
-                        if k - tick() > 0.1 then
-                            wait(0.1)
-                            k = tick()
-                        end
-                        pcall(function()
-                            for i, v in pairs(game.Workspace.Enemies:GetChildren()) do
-                                if v.Humanoid.Health > 0 then
-                                    if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60.9 then
-                                    wait(.2)
-                                    Unboost()
-                                    end
-                                end
-                            end
-                        end)
-                    end
-                end
-            end)
-            
-            tjw1 = true
-            task.spawn(
-                function()
-                    local a = game.Players.LocalPlayer
-                    local b = require(a.PlayerScripts.CombatFramework.Particle)
-                    local c = require(game:GetService("ReplicatedStorage").CombatFramework.RigLib)
-                    if not shared.orl then
-                        shared.orl = c.wrapAttackAnimationAsync
-                    end
-                    if not shared.cpc then
-                        shared.cpc = b.play
-                    end
-                    if tjw1 then
-                        pcall(
-                            function()
-                                c.wrapAttackAnimationAsync = function(d, e, f, g, h)
-                                    local i = c.getBladeHits(e, f, g)
-                                    if i then
-                                        b.play = function()
-                                        end
-                                        d:Play(0.1, 0.1, 0.1)
-                                        h(i)
-                                        b.play = shared.cpc
-                                        wait(.5)
-                                        d:Stop()
-                                    end
-                                end
-                            end
-                        )
-                    end
-                end
-            )
-            
-            
-            
-            local CameRa = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework.CameraShaker)
-            CameRa.CameraShakeInstance.CameraShakeState = {FadingIn = 3,FadingOut = 2,Sustained = 0,Inactive =1}
-            
-            local Client = game.Players.LocalPlayer
-            local STOP = require(Client.PlayerScripts.CombatFramework.Particle)
-            local STOPRL = require(game:GetService("ReplicatedStorage").CombatFramework.RigLib)
-            task.spawn(function()
-                pcall(function()
-                    if not shared.orl then
-                        shared.orl = STOPRL.wrapAttackAnimationAsync
-                    end
-                        if not shared.cpc then
-                            shared.cpc = STOP.play 
-                        end
-                    spawn(function()
-                        game:GetService("RunService").Stepped:Connect(function()
-                            STOPRL.wrapAttackAnimationAsync = function(a,b,c,d,func)
-                                local Hits = STOPRL.getBladeHits(b,c,d)
-                                if Hits then
-                                    if  _G.FastAttackNormalSpeed then
-                                        STOP.play = function() end
-                                        a:Play(0.1,0.1,0.1)
-                                        func(Hits)
-                                        STOP.play = shared.cpc
-                                        wait(a.length * 0.1)
-                                        a:Stop()
-                                    else
-                                        func(Hits)
-                                        STOP.play = shared.cpc
-                                        wait(a.length * 0.1)
-                                        a:Stop()
-                                    end
-                                end
-                            end
-                        end)
-                    end)
-                end)
-                end)
-
-while true do
-wait()
-
-game:GetService'VirtualUser':CaptureController()
-game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
-
-end
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/Andzvcll/Andzvcll/main/click%20hitbot'))()
 end)
 --shindo
 local Tab = Window:NewTab("Shindo Life")
@@ -435,7 +231,7 @@ OrionLib:MakeNotification({
 	Time = 5
 }) 
  
-_G.Key = "123321"
+_G.Key = "phiphai"
 _G.KeyInput = "string"
  
 function MakeScriptHub()
@@ -564,6 +360,10 @@ Section:NewButton("Hack Bay 2", "nó chỉ bay dc thui nhưng xịn hơn :3", f
     print("Clicked")
     loadstring(game:HttpGet('https://pastebin.com/raw/iTCDbRbG'))()
 end)
+Section:NewButton("Hack Bay 3", "nó chỉ bay dc thui nhưng xịn hơn :3", function()
+    print("Clicked")
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Andzvcll/AN_HUB/main/acc1'))()
+end)
 
 Section:NewKeybind("ẩn hiện cho PC", "lỗi gì tự chỉnh nút nào đó trên bàn phím", Enum.KeyCode.RightAlt, function()
 	Library:ToggleUI()
@@ -571,62 +371,287 @@ end)
 Section:NewButton("hack truy cập file game", "chỉnh sửa ít thôi ko là bay acc", function()
     loadstring(game:HttpGetAsync("https://pastebin.com/raw/fPP8bZ8Z"))()
 end)
---credit
-local Tab = Window:NewTab("Robux Giá Rẻ")
-local Section = Tab:NewSection("Link Mua Game Pass Gía Rẻ ↓↓↓ ")
-Section:NewButton("Facebook Nguyễn An ", "bấm vào để copy", function()
-    setclipboard("https://www.facebook.com/nguyenanutgr/")
-notifLib:CreateDefaultNotif({
- TweenSpeed = 0.5,
- Title = "Nguyễn An ",
- Text = "Đã Sao Chép Link Facebook",
- Duration = 5
-})
+Section:NewButton("vứt mũ", " Vứt Mũ Ra Chỗ Khác", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Andzvcll/Andzvcll/main/drop_hat'))()
+end)
+Section:NewButton("Vất item và đi theo", " .", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/kD8kisTN'))()
+end)
+Section:NewButton("mũ bay vòng vòng", " .", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/4B4fktPS", true))()
+end)
+Section:NewButton("cầm mũ và có thể ăn", " .", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/50AL19P5", true))()
+end)
+Section:NewButton("Cho mũ : Pc và pe", " .", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Andzvcll/AN_HUB/main/give%20hat"))()
+end)
+Section:NewButton("Chỉnh Setting roblox : Pc và pe", " .", function()
+    loadstring(game:HttpGet("https://eternityhub.xyz/BetterRoblox/Loader"))()
+end)
+
+local Tab = Window:NewTab("Fix Lag")
+local Section = Tab:NewSection("Fix Lag Máy yếu")
+Section:NewButton("Fix Lag : Pc và Pe", "Nguyễn An", function()
+    print("Clicked")
+local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
+local g = game
+local w = g.Workspace
+local l = g.Lighting
+local t = w.Terrain
+t.WaterWaveSize = 0
+t.WaterWaveSpeed = 0
+t.WaterReflectance = 0
+t.WaterTransparency = 0
+l.GlobalShadows = false
+l.FogEnd = 9e9
+l.Brightness = 0
+settings().Rendering.QualityLevel = "Level01"
+for i, v in pairs(g:GetDescendants()) do
+    if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+        v.Material = "Plastic"
+        v.Reflectance = 0
+    elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
+        v.Transparency = 1
+    elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+        v.Lifetime = NumberRange.new(0)
+    elseif v:IsA("Explosion") then
+        v.BlastPressure = 1
+        v.BlastRadius = 1
+    elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") then
+        v.Enabled = false
+    elseif v:IsA("MeshPart") then
+        v.Material = "Plastic"
+        v.Reflectance = 0
+        v.TextureID = 10385902758728957
+    end
+end
+for i, e in pairs(l:GetChildren()) do
+    if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+        e.Enabled = false
+    end
+end
 
 end)
-local Section = Tab:NewSection("Giá Robux 120h ↓↓↓")
-Section:NewDropdown("Giá Robux 120h", "Mua Rb", {"10k Tsr = 140 Rb : 98 đã thuế", "10k Card = 120 Rb : 84 đã thuế", "Có Bán Acc Blox Ae Mua Ib"}, function(currentOption)
-    print(currentOption)
+local Section = Tab:NewSection("Bật hack trc khi bật untra fix lag")
+Section:NewButton("Untra Fix Lag : Pc và Pe ( Treo game )", "Nguyễn An", function()
+    print("Clicked")   
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Andzvcll/AN_HUB/main/ultra%20fix%20lag'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Andzvcll/AN_HUB/main/acc1'))()
 end)
-local Section = Tab:NewSection("Game Pass Blox ↓↓↓")
-Section:NewDropdown("Giá Game Pass Blox", "Mua Gp", {"X2 Drop = 27k ví ( 350 Robux )", "thuyền nhanh = 27k ví ( 350 Robux )", "+1 Slot Fruit = 30k ví ( 400 Robux )", "X2 Beli = 35k ví ( 450 Robux )", "X2 Masteri = 35k ví ( 450 Robux )", "Yoru = 90k ví ( 1200 robux )", "Tìm fruit = 180k ví ( 2700 Robux ),"}, function(currentOption)
-    print(currentOption)
+
+local Tab = Window:NewTab("Nv Tảng Đá")
+local Section = Tab:NewSection("Teleport World")
+
+Section:NewButton("Tele Tảng Đá", "ButtonInfo", function()
+    two(CFrame.new(-5355.62256, 313.715485, -2495.17383, 0.447177857, 6.1724144e-08, 0.894445062, 3.27962084e-08, 1, -8.54047784e-08, -0.894445062, 6.75255336e-08, 0.447177857))
 end)
---credit
-local Tab = Window:NewTab("Sever Vip Blox")
-local Section = Tab:NewSection("Sever Vip free ")
-Section:NewButton("Link Svv Blox 1 ", "nhìn đb", function()
-setclipboard("https://www.roblox.com/games/2753915549?privateServerLinkCode=53591536428935719836471045949919")
-notifLib:CreateDefaultNotif({
- TweenSpeed = 0.5,
- Title = "Nguyễn An ",
- Text = "Đã Sao Chép Link 1 ",
- Duration = 5
+Section:NewButton("Tele Cổ Thụ", "ButtonInfo", function()
+    two(CFrame.new(2957.51367, 2282.13867, -7220.29492, 0.407614022, 2.05194652e-08, -0.913154304, 8.29036395e-08, 1, 5.9477518e-08, 0.913154304, -9.99476839e-08, 0.407614022))
+end)
+local Tab = Window:NewTab("auto bouty")
+local Section = Tab:NewSection("Mua Key để xài")
+Section:NewButton("Auto Bouty", "Nguyễn An", function()
+    print("Clicked")
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Nguyễn An : bật hack vui lòng đợi 30s-1p ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+OrionLib:MakeNotification({
+	Name = "Nguyễn An ",
+	Content = "Sao Lại Vô Đây , Mua Key Chưa ?",
+	Image = "rbxthumb://type=Asset&id=11749957186&w=150&h=150",
+	Time = 5
+}) 
+ 
+_G.Key = "longchuminh"
+_G.KeyInput = "string"
+ 
+function MakeScriptHub()
+    if _G.wl_key then
+return
+end
+_G.wl_key ='340a01892b35423ea22862aaad33fdd950ad50eb'
+DelayTime = 120
+getgenv().FpsBoost = true
+getgenv().Setting = {
+    ["Team"] = "Pirates", --Marines
+    ["Webh00k"] = {
+        ["Enabled"] = true,
+        ["Embed"] = true,
+        ["StoredFruit"] = true,
+        ["ImageEmbed"] = true,
+        ["CustomImage"] = true,
+        ["CustomImageUrl"] = "", --mmb
+        ["OnServerHop"] = true,
+        ["BountyChanged"] = true,
+    }, 
+    ["Panel"] = {
+      ["Enabled"] = true,
+      ["IgnoreSelfChat"] = false,
+    },
+    ["ChatKill"] = {
+        Enable = true,
+        Chat = {"Nguyễn An Dz"
+        },
+    },
+    ["Mention"] = {
+        ["Enable"] = true,
+        ["Id"] = "here",
+        ["EveryBounty"] = 10000,
+    },
+    ["FpsLock"] = {
+        ["Enable"] = true,
+        ["Cap"] = 30,
+    },
+    ["LockBounty"] = {
+        ["Enable"] = true,
+        ["Cap"] = 30000000,
+    },
+    ["Click"] = {
+        ["Enable"] = true,
+        ["OnLowHealthDisable"] = true,
+        ["LowHealth"] = 1000,
+    },
+    ["Misc"] = {
+        ["AutoBuyRandomandStoreFruit"] = true,
+        ["AutoBuySurprise"] = false,
+    },
+    ["Invisible"] = true,
+    ["IgnoreFriends"] = false, --Server Hop When Your friends in your server
+    ["GunMethod"] = true, --Use Melee,Gun Will automaticly disable invisible for things
+    ["SpamSkill"] = false, -- Will use all skills as fast as possbile ignore holding skills
+    ["Weapons"] = {
+        ["Melee"] = {
+            ["Enable"] = true,
+            ["Delay"] = 2,
+            ["Skills"] = {
+                ["Z"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 024932599,
+                },
+               [ "X"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 2034210149,
+                },
+
+                ["C"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 214012481240124,
+                },
+            },
+        },
+        ["Blox Fruit"] = {
+            ["Enable"] = true,
+            ["Delay"] = 0,
+            ["Skills"] = {
+                ["Z"] = {
+                    ["Enable"] = false,
+                    ["HoldTime"] = 0,
+                },
+                ["X"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 0,
+                },
+
+                ["C"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 0,
+                },
+                ["V"] = {
+                    ["Enable"] = false,
+                    ["HoldTime"] = 5,
+                },
+                ["F"] = {
+                    ["Enable"] = false,
+                    ["HoldTime"] = 0,
+                },
+            },
+        },
+        ["Gun"] = {
+            ["Enable"] = true,
+            ["Delay"] = 0,
+            ["Skills"] = {
+                ["Z"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 0,
+                },
+                ["X"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 0,
+                },
+            },
+        },
+        ["Sword"] = {
+            ["Enable"] = true,
+            ["Delay"] = 0,
+            ["Skills"] = {
+                ["Z"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 0,
+                },
+                ["X"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 0,
+                },
+            },
+        },
+    }
+}
+repeat wait()
+until game:IsLoaded()
+delay(DelayTime or 120,function()
+    local CG = game:GetService("CoreGui")
+    if not CG:FindFirstChild("W-azureHubAutoBounty") then
+       game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
+    end
+end)
+wait(2)
+loadstring(game:HttpGet('https://scripts.luawl.com/11266/BloxFruitAutoBounty.lua'))()
+end
+ 
+function CorrectKeyNotification()
+    OrionLib:MakeNotification({
+        Name = "Nguyễn AN",
+        Content = "Mã key k đc chia sẻ ko tao xiên mày",
+        Image = "rbxthumb://type=Asset&id=11749957186&w=150&h=150",
+        Time = 5
+    })
+wait(5)
+    OrionLib:Destroy()
+end
+function InCorrectKeyNotification()
+    OrionLib:MakeNotification({
+        Name = "Nguyễn An",
+        Content = "mày chưa mua key mà đòi xài hack",
+        Image = "rbxthumb://type=Asset&id=11749957186&w=150&h=150",
+        Time = 5
+    })
+end
+ 
+local Tab = Window:MakeTab({
+	Name = "Nguyễn An",
+	Icon = "rbxthumb://type=Asset&id=11749957186&w=150&h=150",
+	PremiumOnly = false
 })
-   end)
-Section:NewButton("Link Svv Blox 2 ( hết hạn )", "nhìn đb", function()
-setclipboard("https://www.roblox.com/games/2753915549?privateServerLinkCode=91552539587570643136068012039530")
-notifLib:CreateDefaultNotif({
- TweenSpeed = 0.5,
- Title = "Nguyễn An ",
- Text = "Đã Sao Chép Link 2",
- Duration = 5
+Tab:AddTextbox({
+	Name = "Nhập Key Vô Rồi Bấm Dòng Bên Dưới Bản 1  ↓ ↓ ↓",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		_G.KeyInput = Value
+InCorrectKeyNotification()
+	end	  
 })
-   end)
-   Section:NewButton("Link Svv Blox 3 ( hết hạn )", "nhìn đb", function()
-setclipboard("https://www.roblox.com/games/2753915549?privateServerLinkCode=55221684856973790508958369501412")
-notifLib:CreateDefaultNotif({
- TweenSpeed = 0.5,
- Title = "Nguyễn An ",
- Text = "Đã Sao Chép Link 3 ",
- Duration = 5
+Tab:AddButton({
+	Name = "sau khi nhập key bấm vô đây",
+	Callback = function()
+      		if _G.KeyInput == _G.Key then
+            MakeScriptHub()
+            CorrectKeyNotification()
+            end
+  	end    
 })
-   end)
-   
-   local Tab = Window:NewTab("Free Robux")
-local Section = Tab:NewSection("Click vào dòng dưới để nhận Robux ↓↓↓ ")
-Section:NewButton("click Nhận Robux", "hehe boy", function()
- game.Players.localPlayer:kick("Bất ngờ chưa bà già?")
- wait(7)
-    game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
-    end)
+ 
+ 
+end)
+
+
