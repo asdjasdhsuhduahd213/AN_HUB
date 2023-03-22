@@ -460,7 +460,15 @@ Section:NewButton("Người Máy + Bay để đi ải", "ButtonInfo", functio
 print("Clicked")
     loadstring(game:HttpGet('https://pastebin.com/raw/iTCDbRbG'))()
     two(CFrame.new(28492.0957, 14895.6328, -421.79657, -0.196106553, -2.49572771e-08, 0.980582595, 1.00235162e-07, 1, 4.54974938e-08, -0.980582595, 1.07211207e-07, -0.196106553))
+    OrionLib:MakeNotification({
+        Name = "Nguyễn An",
+        Content = "Bật hack bay lên số 8 , rồi bay ra khỏi map",
+        Image = "rbxthumb://type=Asset&id=11749957186&w=150&h=150",
+        Time = 5
+    })
+end
 end)
+
 
 Section:NewButton("Thỏ", "ButtonInfo", function()
     two(CFrame.new(29020.4277, 14890.6328, -378.330383, 0.990481138, -7.46895665e-08, -0.137648329, 6.20387155e-08, 1, -9.61971978e-08, 0.137648329, 8.67419843e-08, 0.990481138))
