@@ -466,7 +466,7 @@ print("Clicked")
         Image = "rbxthumb://type=Asset&id=11749957186&w=150&h=150",
         Time = 5
     })
-end
+
 end)
 
 
