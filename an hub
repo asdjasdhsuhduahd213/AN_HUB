@@ -491,7 +491,7 @@ print("Clicked")
     
 end)
 local Section = Tab:NewSection("Auto Né Bom tộc cybort")
-ection:NewButton("Né Bom", "ButtonInfo", function()
+Section:NewButton("Né Bom", "ButtonInfo", function()
 print("Clicked")
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-20093.4961, 9954.93945, -125.194695, 0.627363682, 1.15070167e-08, 0.778726399, -8.20592732e-08, 1, 5.13325205e-08, -0.778726399, -9.61058788e-08, 0.627363682)
     end)
