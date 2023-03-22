@@ -440,7 +440,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/A
 loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/acc1'))()
 end)
 
-local Tab = Window:NewTab("TelePort Up tộc")
+local Tab = Window:NewTab("Teleport Up tộc")
 local Section = Tab:NewSection("tp check")
 
 Section:NewButton("Tele Tảng Đá", "ButtonInfo", function()
@@ -451,7 +451,7 @@ Section:NewButton("Tele Cổ Thụ", "ButtonInfo", function()
     two(CFrame.new(2957.51367, 2282.13867, -7220.29492, 0.407614022, 2.05194652e-08, -0.913154304, 8.29036395e-08, 1, 5.9477518e-08, 0.913154304, -9.99476839e-08, 0.407614022))
 end)
 
-local Section = Tab:NewSection("Teleport Cổng Tộc")
+local Section = Tab:NewSection("Teleport Cổng Tộc (vui lòng vô temple để bật)")
 Section:NewButton("Cá", "ButtonInfo", function()
     two(CFrame.new(28223.9746, 14890.6338, -211.404022, -0.263963521, -6.30879171e-08, 0.964532673, -4.29495977e-08, 1, 5.36537463e-08, -0.964532673, -2.7263658e-08, -0.263963521))
 end)
