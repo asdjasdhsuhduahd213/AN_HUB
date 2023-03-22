@@ -453,43 +453,40 @@ end)
 
 local Section = Tab:NewSection("Teleport Cổng Tộc (vui lòng vô temple để bật)")
 Section:NewButton("Cá", "ButtonInfo", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.3555, 14896.5352, 102.624695, 0, 0, 1, 0, 1, 0, -1, 0, 0)
     two(CFrame.new(28223.9746, 14890.6338, -211.404022, -0.263963521, -6.30879171e-08, 0.964532673, -4.29495977e-08, 1, 5.36537463e-08, -0.964532673, -2.7263658e-08, -0.263963521))
 end)
 
 Section:NewButton("Người Máy + Bay để đi ải", "ButtonInfo", function()
 print("Clicked")
-    loadstring(game:HttpGet('https://pastebin.com/raw/iTCDbRbG'))()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.3555, 14896.5352, 102.624695, 0, 0, 1, 0, 1, 0, -1, 0, 0)
     two(CFrame.new(28492.0957, 14895.6328, -421.79657, -0.196106553, -2.49572771e-08, 0.980582595, 1.00235162e-07, 1, 4.54974938e-08, -0.980582595, 1.07211207e-07, -0.196106553))
-    OrionLib:MakeNotification({
-        Name = "Nguyễn An",
-        Content = "Bật hack bay lên số 8 , rồi bay ra khỏi map",
-        Image = "rbxthumb://type=Asset&id=11749957186&w=150&h=150",
-        Time = 5
-    })
-
+    
 end)
 
 
 Section:NewButton("Thỏ", "ButtonInfo", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.3555, 14896.5352, 102.624695, 0, 0, 1, 0, 1, 0, -1, 0, 0)
     two(CFrame.new(29020.4277, 14890.6328, -378.330383, 0.990481138, -7.46895665e-08, -0.137648329, 6.20387155e-08, 1, -9.61971978e-08, 0.137648329, 8.67419843e-08, 0.990481138))
 end)
 
 Section:NewButton("Con người + click hitbot", "ButtonInfo", function()
 print("Clicked")
-
-    two(CFrame.new(29237.3965, 14891.7373, -202.29657, 0.314430177, -1.06308867e-07, -0.94928062, 5.46941301e-08, 1, -9.38725435e-08, 0.94928062, -2.24037162e-08, 0.314430177))
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.3555, 14896.5352, 102.624695, 0, 0, 1, 0, 1, 0, -1, 0, 0)
+two(CFrame.new(29237.3965, 14891.7373, -202.29657, 0.314430177, -1.06308867e-07, -0.94928062, 5.46941301e-08, 1, -9.38725435e-08, 0.94928062, -2.24037162e-08, 0.314430177))
 loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/click%20hitbot'))()
 end)
 
 Section:NewButton("Thiên thần + Bay để đi ải ", "ButtonInfo", function()
 print("Clicked")
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.3555, 14896.5352, 102.624695, 0, 0, 1, 0, 1, 0, -1, 0, 0)
     loadstring(game:HttpGet('https://pastebin.com/raw/iTCDbRbG'))()
     two(CFrame.new(28962.1758, 14919.2812, 236.689529, 0.0245016906, -1.02372431e-08, -0.999699771, 6.26366514e-08, 1, -8.70515215e-09, 0.999699771, -6.24045597e-08, 0.0245016906))
 end)
 
 Section:NewButton("Quỷ + click hitbot", "ButtonInfo", function()
 print("Clicked")
-    
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.3555, 14896.5352, 102.624695, 0, 0, 1, 0, 1, 0, -1, 0, 0)
    two(CFrame.new(28666.498, 14890.335, 453.693146, -0.701418459, -6.73539589e-08, 0.71274972, -1.05283206e-07, 1, -9.110666e-09, -0.71274972, -8.14309615e-08, -0.701418459))
    loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/click%20hitbot'))()
    end)
