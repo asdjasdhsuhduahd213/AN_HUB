@@ -440,7 +440,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/A
 loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/acc1'))()
 end)
 
-local Tab = Window:NewTab("Nv Tảng Đá")
+local Tab = Window:NewTab("TelePort Up tộc")
 local Section = Tab:NewSection("tp check")
 
 Section:NewButton("Tele Tảng Đá", "ButtonInfo", function()
@@ -449,228 +449,31 @@ end)
 Section:NewButton("Tele Cổ Thụ", "ButtonInfo", function()
     two(CFrame.new(2957.51367, 2282.13867, -7220.29492, 0.407614022, 2.05194652e-08, -0.913154304, 8.29036395e-08, 1, 5.9477518e-08, 0.913154304, -9.99476839e-08, 0.407614022))
 end)
-local Section = Tab:NewSection("tp race")
-Section:NewButton("fish", "ButtonInfo", function()
+local Section = Tab:NewSection("Teleport Cổng Tộc")
+Section:NewButton("Cá", "ButtonInfo", function()
     two(CFrame.new(28223.9746, 14890.6338, -211.404022, -0.263963521, -6.30879171e-08, 0.964532673, -4.29495977e-08, 1, 5.36537463e-08, -0.964532673, -2.7263658e-08, -0.263963521))
 end)
-Section:NewButton("cybord", "ButtonInfo", function()
+Section:NewButton("Người Máy + Bay để đi ải", "ButtonInfo", function()
+print("Clicked")
+    loadstring(game:HttpGet('https://pastebin.com/raw/iTCDbRbG'))()
     two(CFrame.new(28492.0957, 14895.6328, -421.79657, -0.196106553, -2.49572771e-08, 0.980582595, 1.00235162e-07, 1, 4.54974938e-08, -0.980582595, 1.07211207e-07, -0.196106553))
 end)
-Section:NewButton("mink", "ButtonInfo", function()
+Section:NewButton("Thỏ", "ButtonInfo", function()
     two(CFrame.new(29020.4277, 14890.6328, -378.330383, 0.990481138, -7.46895665e-08, -0.137648329, 6.20387155e-08, 1, -9.61971978e-08, 0.137648329, 8.67419843e-08, 0.990481138))
 end)
-Section:NewButton("human", "ButtonInfo", function()
+Section:NewButton("Con người", "ButtonInfo", function()
     two(CFrame.new(29237.3965, 14891.7373, -202.29657, 0.314430177, -1.06308867e-07, -0.94928062, 5.46941301e-08, 1, -9.38725435e-08, 0.94928062, -2.24037162e-08, 0.314430177))
 end)
-Section:NewButton("sky", "ButtonInfo", function()
+Section:NewButton("Thiên thần + Bay để đi ải ", "ButtonInfo", function()
+print("Clicked")
+    loadstring(game:HttpGet('https://pastebin.com/raw/iTCDbRbG'))()
     two(CFrame.new(28962.1758, 14919.2812, 236.689529, 0.0245016906, -1.02372431e-08, -0.999699771, 6.26366514e-08, 1, -8.70515215e-09, 0.999699771, -6.24045597e-08, 0.0245016906))
 end)
-Section:NewButton("gloud", "ButtonInfo", function()
+Section:NewButton("Quỷ + click hitbot ", "ButtonInfo", function()
+print("Clicked")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/click%20hitbot'))()
     two(CFrame.new(28666.498, 14890.335, 453.693146, -0.701418459, -6.73539589e-08, 0.71274972, -1.05283206e-07, 1, -9.110666e-09, -0.71274972, -8.14309615e-08, -0.701418459))
 end)
-local Tab = Window:NewTab("auto bouty")
-local Section = Tab:NewSection("Mua Key để xài")
-Section:NewButton("Auto Bouty", "Nguyễn An", function()
-    print("Clicked")
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Nguyễn An : bật hack vui lòng đợi 30s-1p ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
-OrionLib:MakeNotification({
-	Name = "Nguyễn An ",
-	Content = "Sao Lại Vô Đây , Mua Key Chưa ?",
-	Image = "rbxthumb://type=Asset&id=11749957186&w=150&h=150",
-	Time = 5
-}) 
- 
-_G.Key = "longchuminh"
-_G.KeyInput = "string"
- 
-function MakeScriptHub()
-    if _G.wl_key then
-return
-end
-_G.wl_key ='340a01892b35423ea22862aaad33fdd950ad50eb'
-DelayTime = 120
-getgenv().FpsBoost = true
-getgenv().Setting = {
-    ["Team"] = "Pirates", --Marines
-    ["Webh00k"] = {
-        ["Enabled"] = true,
-        ["Embed"] = true,
-        ["StoredFruit"] = true,
-        ["ImageEmbed"] = true,
-        ["CustomImage"] = true,
-        ["CustomImageUrl"] = "", --mmb
-        ["OnServerHop"] = true,
-        ["BountyChanged"] = true,
-    }, 
-    ["Panel"] = {
-      ["Enabled"] = true,
-      ["IgnoreSelfChat"] = false,
-    },
-    ["ChatKill"] = {
-        Enable = true,
-        Chat = {"Nguyễn An Dz"
-        },
-    },
-    ["Mention"] = {
-        ["Enable"] = true,
-        ["Id"] = "here",
-        ["EveryBounty"] = 10000,
-    },
-    ["FpsLock"] = {
-        ["Enable"] = true,
-        ["Cap"] = 30,
-    },
-    ["LockBounty"] = {
-        ["Enable"] = true,
-        ["Cap"] = 30000000,
-    },
-    ["Click"] = {
-        ["Enable"] = true,
-        ["OnLowHealthDisable"] = true,
-        ["LowHealth"] = 1000,
-    },
-    ["Misc"] = {
-        ["AutoBuyRandomandStoreFruit"] = true,
-        ["AutoBuySurprise"] = false,
-    },
-    ["Invisible"] = true,
-    ["IgnoreFriends"] = false, --Server Hop When Your friends in your server
-    ["GunMethod"] = true, --Use Melee,Gun Will automaticly disable invisible for things
-    ["SpamSkill"] = false, -- Will use all skills as fast as possbile ignore holding skills
-    ["Weapons"] = {
-        ["Melee"] = {
-            ["Enable"] = true,
-            ["Delay"] = 2,
-            ["Skills"] = {
-                ["Z"] = {
-                    ["Enable"] = true,
-                    ["HoldTime"] = 024932599,
-                },
-               [ "X"] = {
-                    ["Enable"] = true,
-                    ["HoldTime"] = 2034210149,
-                },
 
-                ["C"] = {
-                    ["Enable"] = true,
-                    ["HoldTime"] = 214012481240124,
-                },
-            },
-        },
-        ["Blox Fruit"] = {
-            ["Enable"] = true,
-            ["Delay"] = 0,
-            ["Skills"] = {
-                ["Z"] = {
-                    ["Enable"] = false,
-                    ["HoldTime"] = 0,
-                },
-                ["X"] = {
-                    ["Enable"] = true,
-                    ["HoldTime"] = 0,
-                },
-
-                ["C"] = {
-                    ["Enable"] = true,
-                    ["HoldTime"] = 0,
-                },
-                ["V"] = {
-                    ["Enable"] = false,
-                    ["HoldTime"] = 5,
-                },
-                ["F"] = {
-                    ["Enable"] = false,
-                    ["HoldTime"] = 0,
-                },
-            },
-        },
-        ["Gun"] = {
-            ["Enable"] = true,
-            ["Delay"] = 0,
-            ["Skills"] = {
-                ["Z"] = {
-                    ["Enable"] = true,
-                    ["HoldTime"] = 0,
-                },
-                ["X"] = {
-                    ["Enable"] = true,
-                    ["HoldTime"] = 0,
-                },
-            },
-        },
-        ["Sword"] = {
-            ["Enable"] = true,
-            ["Delay"] = 0,
-            ["Skills"] = {
-                ["Z"] = {
-                    ["Enable"] = true,
-                    ["HoldTime"] = 0,
-                },
-                ["X"] = {
-                    ["Enable"] = true,
-                    ["HoldTime"] = 0,
-                },
-            },
-        },
-    }
-}
-repeat wait()
-until game:IsLoaded()
-delay(DelayTime or 120,function()
-    local CG = game:GetService("CoreGui")
-    if not CG:FindFirstChild("W-azureHubAutoBounty") then
-       game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
-    end
-end)
-wait(2)
-loadstring(game:HttpGet('https://scripts.luawl.com/11266/BloxFruitAutoBounty.lua'))()
-end
- 
-function CorrectKeyNotification()
-    OrionLib:MakeNotification({
-        Name = "Nguyễn AN",
-        Content = "Mã key k đc chia sẻ ko tao xiên mày",
-        Image = "rbxthumb://type=Asset&id=11749957186&w=150&h=150",
-        Time = 5
-    })
-wait(5)
-    OrionLib:Destroy()
-end
-function InCorrectKeyNotification()
-    OrionLib:MakeNotification({
-        Name = "Nguyễn An",
-        Content = "mày chưa mua key mà đòi xài hack",
-        Image = "rbxthumb://type=Asset&id=11749957186&w=150&h=150",
-        Time = 5
-    })
-end
- 
-local Tab = Window:MakeTab({
-	Name = "Nguyễn An",
-	Icon = "rbxthumb://type=Asset&id=11749957186&w=150&h=150",
-	PremiumOnly = false
-})
-Tab:AddTextbox({
-	Name = "Nhập Key Vô Rồi Bấm Dòng Bên Dưới Bản 1  ↓ ↓ ↓",
-	Default = "",
-	TextDisappear = true,
-	Callback = function(Value)
-		_G.KeyInput = Value
-InCorrectKeyNotification()
-	end	  
-})
-Tab:AddButton({
-	Name = "sau khi nhập key bấm vô đây",
-	Callback = function()
-      		if _G.KeyInput == _G.Key then
-            MakeScriptHub()
-            CorrectKeyNotification()
-            end
-  	end    
-})
- 
- 
-end)
 
 
