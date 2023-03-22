@@ -476,8 +476,9 @@ end)
 
 Section:NewButton("Con người + click hitbot", "ButtonInfo", function()
 print("Clicked")
-loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/click%20hitbot'))()
+
     two(CFrame.new(29237.3965, 14891.7373, -202.29657, 0.314430177, -1.06308867e-07, -0.94928062, 5.46941301e-08, 1, -9.38725435e-08, 0.94928062, -2.24037162e-08, 0.314430177))
+loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/click%20hitbot'))()
 end)
 
 Section:NewButton("Thiên thần + Bay để đi ải ", "ButtonInfo", function()
@@ -488,9 +489,10 @@ end)
 
 Section:NewButton("Quỷ + click hitbot", "ButtonInfo", function()
 print("Clicked")
-loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/click%20hitbot'))()
-    two(CFrame.new(28666.498, 14890.335, 453.693146, -0.701418459, -6.73539589e-08, 0.71274972, -1.05283206e-07, 1, -9.110666e-09, -0.71274972, -8.14309615e-08, -0.701418459))
-end)
+    
+   two(CFrame.new(28666.498, 14890.335, 453.693146, -0.701418459, -6.73539589e-08, 0.71274972, -1.05283206e-07, 1, -9.110666e-09, -0.71274972, -8.14309615e-08, -0.701418459))
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/click%20hitbot'))()
+   end)
 
 
 
