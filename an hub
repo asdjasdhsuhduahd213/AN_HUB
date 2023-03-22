@@ -473,7 +473,7 @@ end)
 Section:NewButton("Thiên thần + Bay để đi ải ", "ButtonInfo", function()
 print("Clicked")
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.3555, 14896.5352, 102.624695, 0, 0, 1, 0, 1, 0, -1, 0, 0)
-    loadstring(game:HttpGet('https://pastebin.com/raw/iTCDbRbG'))()
+    loadstring(game:HttpGet('https://pastebin.com/raw/fVhrud1Q'))()
     two(CFrame.new(28962.1758, 14919.2812, 236.689529, 0.0245016906, -1.02372431e-08, -0.999699771, 6.26366514e-08, 1, -8.70515215e-09, 0.999699771, -6.24045597e-08, 0.0245016906))
 end)
 
