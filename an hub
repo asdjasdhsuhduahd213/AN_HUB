@@ -1487,9 +1487,9 @@ print("Clicked")
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-20093.4961, 9954.93945, -125.194695, 0.627363682, 1.15070167e-08, 0.778726399, -8.20592732e-08, 1, 5.13325205e-08, -0.778726399, -9.61058788e-08, 0.627363682)
     end)
     
-    local Tab = Window:NewTab("DONATE")
+    local Tab = Window:NewTab("Shop Ut")
 local Section = Tab:NewSection("NHẬN CÀY THUÊ BÁN + Bán Robux")
-Section:NewButton("Sao chép Link ( lỗi )  ", ":3", function()
+Section:NewButton("Sao chép Link   ", ":3", function()
     print("Clicked")
-   
+   setclipboard('https://www.facebook.com/nguyenanutgr')
 end)
