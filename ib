@@ -1,0 +1,48 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local ImageLabel = Instance.new("ImageLabel")
+local UICorner = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+ImageLabel.Parent = ScreenGui
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.Position = UDim2.new(0.248022676, 0, 0.202833742, 0)
+ImageLabel.Size = UDim2.new(0.503378391, 0, 0.594230771, 0)
+ImageLabel.Image = "rbxassetid://12871371157"
+
+UICorner.CornerRadius = UDim.new(0, 10)
+UICorner.Parent = ImageLabel
+
+TextButton.Parent = ImageLabel
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.Position = UDim2.new(0.892617464, 0, 0, 0)
+TextButton.Size = UDim2.new(0.107382551, 0, 0.152103558, 0)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "X"
+TextButton.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextButton.TextSize = 45.000
+
+UICorner_2.CornerRadius = UDim.new(0, 10)
+UICorner_2.Parent = TextButton
+
+-- Scripts:
+
+local function NPFYZO_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent:Destroy()
+	end)
+end
+coroutine.wrap(NPFYZO_fake_script)()
