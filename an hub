@@ -1493,3 +1493,8 @@ Section:NewButton("Sao chép Link   ", ":3", function()
     print("Clicked")
    setclipboard('https://www.facebook.com/nguyenanutgr')
 end)
+local Section = Tab:NewSection("CÀY THUÊ BÁN + Bán Robux")
+Section:NewButton("Bảng Giá Cày Thuê   ", ":3", function()\
+print("Clicked")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/ib'))()
+end)
