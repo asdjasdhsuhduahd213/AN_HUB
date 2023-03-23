@@ -1489,7 +1489,7 @@ print("Clicked")
     
     local Tab = Window:NewTab("DONATE")
 local Section = Tab:NewSection("NHẬN CÀY THUÊ BÁN + Bán Robux")
-Section:NewButton("Sao chép Link  ", ":3", function()
+Section:NewButton("Sao chép Link ( lỗi )  ", ":3", function()
     print("Clicked")
-   setclipboard(https://www.facebook.com/nguyenanutgr)
+   
 end)
