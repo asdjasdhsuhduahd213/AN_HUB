@@ -28,42 +28,7 @@ UIGradient.Parent = UIStroke
 -- Scripts:
 
 local function VVOJSC_fake_script() -- ImageButton.LocalScript 
-	local script = Instance.new('LocalScript', ImageButton)
-	
-local UIS = game:GetService('UserInputService')
-local ImageButton = script.Parent
-local dragToggle = nil
-local dragSpeed = 0.25
-local dragStart = nil
-local startPos = nil
 
-local function updateInput(input)
- local delta = input.Position - dragStart
- local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
-  startPos.Y.Scale, startPos.Y.Offset + delta.Y)
- game:GetService('TweenService'):Create(ImageButton, TweenInfo.new(dragSpeed), {Position = position}):Play()
-end
-
-ImageButton.InputBegan:Connect(function(input)
- if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
-  dragToggle = true
-  dragStart = input.Position
-  startPos = ImageButton.Position
-  input.Changed:Connect(function()
-   if input.UserInputState == Enum.UserInputState.End then
-    dragToggle = false
-   end
-  end)
- end
-end)
-
-UIS.InputChanged:Connect(function(input)
- if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-  if dragToggle then
-   updateInput(input)
-  end
- end
-end)
 
 	ImageButton.MouseButton1Down:Connect(function()
 		game:GetService("VirtualInputManager"):SendKeyEvent(true, "RightAlt" , false , game)
