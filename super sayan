@@ -1,0 +1,6 @@
+
+    local args = {
+    [1] = true
+}
+
+game:GetService("Players"):WaitForChild("0"):WaitForChild("Backpack"):WaitForChild("Awakening"):WaitForChild("RemoteFunction"):InvokeServer(unpack(args))
