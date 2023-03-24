@@ -514,10 +514,24 @@ local Section = Tab:NewSection("NHẬN CÀY THUÊ BÁN + Bán Robux")
 Section:NewButton("Sao chép Link   ", ":3", function()
     print("Clicked")
    setclipboard('https://www.facebook.com/nguyenanutgr')
+   game:GetService("StarterGui"):SetCore("SendNotification", { 
+    Title = "Nguyễn An";
+    Text = "Hack Ngon không";
+    Button1 = "Ngon";
+    Button2 = "đéo";
+    Icon = "rbxthumb://type=Asset&id=11749957186&w=150&h=150"})
+    Duration = 5;
    end)
 local Section = Tab:NewSection("CÀY THUÊ BÁN + Bán Robux")
 Section:NewButton("Bảng Giá Cày Thuê   ", ":3", function()
 print("Clicked")
 loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/ib'))()
 setclipboard('https://www.facebook.com/nguyenanutgr')
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+    Title = "Nguyễn An";
+    Text = "Hack Ngon không";
+    Button1 = "Ngon";
+    Button2 = "đéo";
+    Icon = "rbxthumb://type=Asset&id=11749957186&w=150&h=150"})
+    Duration = 5;
  end)
