@@ -535,3 +535,13 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
     Icon = "rbxthumb://type=Asset&id=11749957186&w=150&h=150"})
     Duration = 5;
  end)
+ local Section = Tab:NewSection("Đóng góp ý kiến về script")
+ Section:NewButton("Nơi đóng góp   ", ":3", function()
+ print("Clicked")
+   setclipboard('https://www.facebook.com/nguyenanutgr')
+   game:GetService("StarterGui"):SetCore("SendNotification", { 
+    Title = "Nguyễn An";
+    Text = "Đã Sao chép link fb";
+    Icon = "rbxthumb://type=Asset&id=11749957186&w=150&h=150"})
+    Duration = 5;
+   end)
