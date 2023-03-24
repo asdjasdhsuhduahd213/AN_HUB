@@ -494,22 +494,7 @@ Section:NewButton("Né Bom", "ButtonInfo", function()
 print("Clicked")
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-20093.4961, 9954.93945, -125.194695, 0.627363682, 1.15070167e-08, 0.778726399, -8.20592732e-08, 1, 5.13325205e-08, -0.778726399, -9.61058788e-08, 0.627363682)
 end)
-local Section = Tab:NewSection("Tự động bật tộc V4")
-Section:NewToggle("Auto V4", "Phi phai", function(state)
-    if state then
-    while true do
-    local args = {
-    [1] = true
-}
 
-game:GetService("Players"):WaitForChild("0"):WaitForChild("Backpack"):WaitForChild("Awakening"):WaitForChild("RemoteFunction"):InvokeServer(unpack(args))
-end
-    else
-        while true do
- local args = {
-    [1] = false
-}
-end)
 local Tab = Window:NewTab("Shop Ut")
 local Section = Tab:NewSection("NHẬN CÀY THUÊ BÁN + Bán Robux")
 Section:NewButton("Sao chép Link   ", ":3", function()
