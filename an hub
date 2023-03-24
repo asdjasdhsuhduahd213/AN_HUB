@@ -509,8 +509,8 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF
         end  
 end
 end)
-local Tab = Window:NewTab("Shop Ut")
-local Section = Tab:NewSection("NHẬN CÀY THUÊ BÁN + Bán Robux")
+local Tab = Window:NewTab("Shop Uy tín")
+local Section = Tab:NewSection("Nơi Bán Robux Uy tín")
 Section:NewButton("Sao chép Link   ", ":3", function()
     print("Clicked")
    setclipboard('https://www.facebook.com/nguyenanutgr')
@@ -522,7 +522,7 @@ Section:NewButton("Sao chép Link   ", ":3", function()
     Icon = "rbxthumb://type=Asset&id=11749957186&w=150&h=150"})
     Duration = 5;
    end)
-local Section = Tab:NewSection("CÀY THUÊ BÁN + Bán Robux")
+local Section = Tab:NewSection("Nơi cày thuê uy tín")
 Section:NewButton("Bảng Giá Cày Thuê   ", ":3", function()
 print("Clicked")
 loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/ib'))()
