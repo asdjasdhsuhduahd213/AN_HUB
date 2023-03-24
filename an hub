@@ -509,6 +509,7 @@ end
  local args = {
     [1] = false
 }
+end)
 local Tab = Window:NewTab("Shop Ut")
 local Section = Tab:NewSection("NHẬN CÀY THUÊ BÁN + Bán Robux")
 Section:NewButton("Sao chép Link   ", ":3", function()
