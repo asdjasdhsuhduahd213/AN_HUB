@@ -74,7 +74,7 @@ end
 game.Players.LocalPlayer.Name = 0000000000
 local notifLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Notification%20Library/main.lua"))()
 local Library = loadstring(game:HttpGet("https://pastebin.com/raw/XwwTN7w6"))()
-local Window = Library.CreateLib("Nguyễn An ( Update Auto Bật Tộc V4 )", "BloodTheme")
+local Window = Library.CreateLib("Nguyễn An ( 30p nữa Update auto đi ải thỏ )", "BloodTheme")
 game:GetService("StarterGui"):SetCore("SendNotification", { 
     Title = "Nguyễn An";
     Text = "Nhận cày Thuê Shindo + blox";
@@ -97,60 +97,44 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
 --test
 
 local Tab = Window:NewTab("Blox Fruit")
-local Section = Tab:NewSection("Blox Fruit")
+local Section = Tab:NewSection("Các Script Pc và Pe ")
 
-Section:NewButton("An_Hub Pc : Pe ( Ngon ) ", "Nguyễn An", function()
-    print("Clicked")
-loadstring(game:HttpGet"https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/blox")()
-end)
-
-Section:NewButton("Mukuro v2 :Pc ( Fram Ngon ) ", "Nguyễn An", function()
-    print("Clicked")
-loadstring(game:HttpGet"https://raw.githubusercontent.com/xDepressionx/Free-Script/main/AllScript.lua")()
-end)
-
-Section:NewButton("Maru X : Mobile ( fake ) ", "Nguyễn An", function()
-    print("Clicked")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/joi-droid/MaruHubBF/main/GOHANSSJ3"))()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/click%20hitbot'))()
-end)
-
-Section:NewButton("Zen Hub :( click link lấy key nhanh )", "Nguyễn An", function()
-    print("Clicked")
-setclipboard('https://pandatechnology.xyz/getkey?service=zenhub&hwid=1339719223_MOBILE&token=cfe54e25c6642d4d12960f6d42298e0658bd714108e9982c3b6e332c5eaa971f18aaffd4372022eb94e46f58831190c0')
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Kaizenofficiall/ZenHub/main/Loader"))()
-end)
-
-Section:NewButton("MuKuRo v1 : Pc ( xài cũng đc )", "Nguyễn An", function()
-    print("Clicked")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/xQuartyx/DonateMe/main/OldBf"))()
-end)
-
-Section:NewButton("Speed Hub x : Pc ", "Nguyễn An", function()
-    print("Clicked")
-loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ahmadsgamer2/Script--Game/main/Script%20Game"))()
-end)
-
-Section:NewButton("Zaque Hub : Pc và Pe", "Nguyễn An", function()
+Section:NewButton("Zaque Hub : Pc và Pe ( Vip )", "Nguyễn An", function()
     print("Clicked")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Mei2232/ZaqueHub/main/Zaque%20Hub"))()
 end)
- 
-Section:NewButton("NEVA HUB : Pc và Pe", "Nguyễn An", function()
-    print("Clicked")
-loadstring(game:HttpGet('https://raw.githubusercontent.com/VEZ2/NEVAHUB/main/2'))()
-end)
 
- 
-Section:NewButton("Hoho hub : Pc và Pe", "Nguyễn An", function()
+Section:NewButton("Speed Hub x : Pc và Pe ( Vip ) ", "Nguyễn An", function()
     print("Clicked")
-loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ahmadsgamer2/Script--Game/main/Script%20Game"))()
 end)
 
 Section:NewButton("Auto Chest (Vip) : Pc và Pe", "Nguyễn An", function()
     print("Clicked")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
 end)
+
+Section:NewButton("Show acc ", "Nguyễn An", function()
+    print("Clicked")
+loadstring(game:HttpGet("https://pastebin.com/raw/zcFd20tT"))()
+end)
+
+local Section = Tab:NewSection("Script Pc ")
+Section:NewButton("MuKuRo v1 : Pc ( xài cũng đc )", "Nguyễn An", function()
+    print("Clicked")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xQuartyx/DonateMe/main/OldBf"))()
+end)
+
+
+Section:NewButton("Mukuro v2 :Pc ( Fram Ngon ) ", "Nguyễn An", function()
+    print("Clicked")
+loadstring(game:HttpGet"https://raw.githubusercontent.com/xDepressionx/Free-Script/main/AllScript.lua")()
+end)
+
+
+
+ 
+
 
 Section:NewButton("Show acc ", "Nguyễn An", function()
     print("Clicked")
