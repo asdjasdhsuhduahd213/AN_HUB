@@ -125,10 +125,9 @@ Section:NewButton("MuKuRo v1 : Pc ( xài cũng đc )", "Nguyễn An", functio
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xQuartyx/DonateMe/main/OldBf"))()
 end)
 
-local Section = Tab:NewSection("Script Pc ")
 Section:NewButton("An_Hub : Pc ", "Nguyễn An", function()
     print("Clicked")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/an%20hub"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/blox"))()
 end)
 
 Section:NewButton("Mukuro v2 :Pc ( Fram Ngon ) ", "Nguyễn An", function()
