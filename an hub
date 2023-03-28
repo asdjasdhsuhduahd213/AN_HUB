@@ -74,7 +74,7 @@ end
 game.Players.LocalPlayer.Name = 0000000000
 local notifLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Notification%20Library/main.lua"))()
 local Library = loadstring(game:HttpGet("https://pastebin.com/raw/XwwTN7w6"))()
-local Window = Library.CreateLib("Nguyễn An ( Update Điều Thú vị )", "BloodTheme")
+local Window = Library.CreateLib("Nguyễn An ( Fix lỗi Tele tộc thỏ v4 )", "BloodTheme")
 game:GetService("StarterGui"):SetCore("SendNotification", { 
     Title = "Nguyễn An";
     Text = "Nhận cày Thuê Shindo + blox";
@@ -451,38 +451,11 @@ end)
 local Section = Tab:NewSection("click tele ải thỏ ( nếu có lỗi vui lòng ib báo ad )")
 Section:NewButton("Auto Tele ải thỏ v4", "ButtonInfo", function()
 print("Clicked")
-    local plr = game.Players.LocalPlayer
-local chr = plr.Character
-local t = game.TweenService
-
-local bv = Instance.new("BodyVelocity")
-bv.MaxForce = Vector3.new(1/0, 1/0, 1/0)
-bv.Velocity = Vector3.new()
-bv.Name = "bV"
-local bav = Instance.new("BodyAngularVelocity")
-bav.AngularVelocity = Vector3.new()
-bav.MaxTorque = Vector3.new(1/0, 1/0, 1/0)
-bav.Name = "bAV" 
-
 for _,v in next, workspace:GetDescendants() do
     if v.Name:find("StartPoint") then
-        pcall(function()
-            repeat 
-                local anc1 = bv:Clone()
-                anc1.Parent = chr.HumanoidRootPart
-                local anc2 = bav:Clone()
-                anc2.Parent = chr.HumanoidRootPart
-                local p = t:Create(chr.HumanoidRootPart, TweenInfo.new((plr:DistanceFromCharacter(v.Position)-150)/320, Enum.EasingStyle.Linear), {CFrame=v.CFrame + Vector3.new(0, v.Size.Y, 0)})
-                p:Play()
-                p.Completed:Wait()
-                chr.HumanoidRootPart.CFrame = v.CFrame
-                anc1:Destroy()
-                anc2:Destroy()
-                wait(1)
-            until v.Parent ~= workspace
-        end)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
     end
-end
+    end
 end)
 local Section = Tab:NewSection("Auto Bật V4")
 Section:NewToggle("Auto bật V4 ( Reset sẽ tự động tắt )", "ToggleInfo", function(state)
