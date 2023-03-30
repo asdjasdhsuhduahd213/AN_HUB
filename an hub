@@ -74,7 +74,7 @@ end
 game.Players.LocalPlayer.Name = 0000000000
 local notifLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Notification%20Library/main.lua"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/lib"))()
-local Window = Library.CreateLib("Nguyễn An ( Fix lỗi Tele tộc thỏ v4 )", "BloodTheme")
+local Window = Library.CreateLib("Nguyễn An ( Fix lỗi k Tele ải mink v4 )", "BloodTheme")
 game:GetService("StarterGui"):SetCore("SendNotification", { 
     Title = "Nguyễn An";
     Text = "Nhận cày Thuê Shindo + blox";
@@ -451,11 +451,10 @@ end)
 local Section = Tab:NewSection("click tele ải thỏ ( nếu có lỗi vui lòng ib báo ad )")
 Section:NewButton("Auto Tele ải thỏ v4", "ButtonInfo", function()
 print("Clicked")
-for _,v in next, workspace:GetDescendants() do
-    if v.Name:find("StartPoint") then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
-    end
-    end
+for i,v in pairs(game.Workspace:GetDescendants()) do -- khai biến
+      if v.Name == "StartPoint" then --name block
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFame = v.CFrame
+end end
 end)
 local Section = Tab:NewSection("Auto Bật V4")
 Section:NewToggle("Auto bật V4 ( Reset sẽ tự động tắt )", "ToggleInfo", function(state)
