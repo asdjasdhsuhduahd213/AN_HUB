@@ -451,7 +451,7 @@ end)
 local Section = Tab:NewSection("click tele ải thỏ ( nếu có lỗi vui lòng ib báo ad )")
 Section:NewButton("Auto Tele ải thỏ v4", "ButtonInfo", function()
 print("Clicked")
-for i,v in pairs(game.Workspace:GetDescendants()) do -- khai biến
+for i,v in next(game.Workspace:GetDescendants()) do -- khai biến
       if v.Name == "StartPoint" then --name block
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFame = v.CFrame
 end end
