@@ -192,10 +192,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ZaRdoOx/Platinium/mai
 end)
 Section:NewButton("Paid Vip K Bán : Bản 1", "Nguyễn An", function()
     print("Clicked")
-loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/lklklkl/main/shindo%201'))()
-end)
-Section:NewButton("Paid Vip K Bán : Bản 2", "Nguyễn An", function()
-    print("Clicked")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/asdjasdhsuhduahd213/lklklkl/main/shindo%202", true))()
  end)
 
