@@ -99,6 +99,17 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
 local Tab = Window:NewTab("Blox Fruit")
 local Section = Tab:NewSection("Các Script Pc và Pe ")
 
+Section:NewToggle("chạy nhanh đến nổ máy", "cút", function(state)
+ if state then
+          InfAbility = state
+        if state == false then
+            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility"):Destroy()
+    else
+        print("Toggle Off")
+        end
+end
+end)
+
 Section:NewButton("Zaque Hub : Pc và Pe ( Vip )", "Nguyễn An", function()
     print("Clicked")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Mei2232/ZaqueHub/main/Zaque%20Hub"))()
