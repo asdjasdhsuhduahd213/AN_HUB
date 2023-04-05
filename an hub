@@ -110,7 +110,7 @@ Section:NewToggle("chạy nhanh đến nổ máy", "cút", function(state)
 end
 end)
  spawn(function()
-        while wait() do
+        while wait(0.1) do
             if InfAbility then
                 InfAb()
             end
