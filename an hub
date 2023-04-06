@@ -255,8 +255,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/asdjasdhsuhduahd213/l
 
 --other
 local Tab = Window:NewTab("Những điều thú vị")
-
-Section:NewButton("Hack Bay 3", "nó chỉ bay dc thui nhưng xịn hơn :3", function()
+local Section = Tab:NewSection("Nguyễn An")
+Section:NewButton("Hack Bay 1", "nó chỉ bay dc thui nhưng xịn hơn :3", function()
     print("Clicked")
     loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/acc1'))()
 end)
