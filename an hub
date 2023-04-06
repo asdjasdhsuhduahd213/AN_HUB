@@ -30,6 +30,11 @@ local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "Prot
                                             ["value"]= "```Người dùng đã chạy script```",
                                             ["inline"]= true
                                         },
+                                    {
+                                            ["name"]= "```Game đang chơi```",
+                                            ["value"]= "```https://www.roblox.com/games/"..Game.PlaceId.."/```",
+                                            ["inline"]= true
+                                        },
                                     }              
                                 }
                             }
@@ -40,6 +45,7 @@ local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "Prot
                     Request = http_request or request or HttpPost or syn.request
                     local Final = {Url = "https://discord.com/api/webhooks/1093465330770260028/4pTWwrvZGf7H5UR2jWBn3yduJINLpb15jZOUAhteUuVNBmN5h6dVAHyYsOVj02jfSKZ0", Body = Encoded, Method = "POST", Headers = Headers}
                     Request(Final)
+
 --Properties:
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
