@@ -132,9 +132,18 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
 --test
 
 local Tab = Window:NewTab("Blox Fruit")
-local Section = Tab:NewSection("Các Script Pc và Pe ")
+local Section = Tab:NewSection("Hỗ trợ")
 
-Section:NewToggle("chạy nhanh đến nổ máy", "cút", function(state)
+Section:NewButton("click có hitbox", "bật rùi là ko dừng lại dc", function()
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/click%20hitbot'))()
+end)
+
+Section:NewButton("Show acc ( lỗi ) ", "Nguyễn An", function()
+    print("Clicked")
+loadstring(game:HttpGet("https://pastebin.com/raw/zcFd20tT"))()
+end)
+
+Section:NewToggle("chạy nhanh đến nổ máy", "....", function(state)
  if state then
           InfAbility = state
         if state == false then
@@ -151,6 +160,42 @@ end)
             end
         end
     end)
+    local Section = Tab:NewSection("Script No Key")
+    Section:NewButton("Ghost Lord  : Pc và Pe ( Vip vãi ) ", "Nguyễn An", function()
+    print("Clicked")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/GGhostVN/GhostLord/main/Main'))()
+end)
+
+Section:NewButton("Blck Hub  : Pc và Pe  ", "Nguyễn An", function()
+    print("Clicked")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/main/BLCK"))()
+end)
+
+Section:NewButton("Uranium Hub  : Pc và Pe ( Chưa test ) ", "Nguyễn An", function()
+    print("Clicked")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Augustzyzx/UraniumMobile/main/UraniumKak.lua"))()
+end)
+
+Section:NewButton("MuKuRo v1 : Pc ( xài cũng đc )", "Nguyễn An", function()
+    print("Clicked")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xQuartyx/DonateMe/main/OldBf"))()
+end)
+
+Section:NewButton("Mukuro v2 :Pc ( Fram Ngon ) ", "Nguyễn An", function()
+    print("Clicked")
+loadstring(game:HttpGet"https://raw.githubusercontent.com/xDepressionx/Free-Script/main/AllScript.lua")()
+end)
+
+Section:NewButton("Auto Chest (Vip) : Pc và Pe", "Nguyễn An", function()
+    print("Clicked")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
+end)
+local Section = Tab:NewSection("Script Cần Key")
+Section:NewButton("Neva Hub : Pc và Pe ( Vip )", "Nguyễn An", function()
+    print("Clicked")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/VEZ2/NEVAHUB/main/2'))()
+end)
+
 Section:NewButton("Zaque Hub : Pc và Pe ( Vip )", "Nguyễn An", function()
     print("Clicked")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Mei2232/ZaqueHub/main/Zaque%20Hub"))()
@@ -161,44 +206,16 @@ Section:NewButton("Speed Hub x : Pc và Pe ( Vip ) ", "Nguyễn An", function(
 loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ahmadsgamer2/Script--Game/main/Script%20Game"))()
 end)
 
-Section:NewButton("Auto Chest (Vip) : Pc và Pe", "Nguyễn An", function()
+Section:NewButton("Backtrap : Pc và Pe  ", "Nguyễn An", function()
     print("Clicked")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
+loadstring(game:HttpGetAsync("https://gitlab.com/Sky2836/test/-/raw/main/Mobile"))()
 end)
 
-Section:NewButton("Show acc ", "Nguyễn An", function()
+Section:NewButton("CFrame Hub : Pc và Pe  ", "Nguyễn An", function()
     print("Clicked")
-loadstring(game:HttpGet("https://pastebin.com/raw/zcFd20tT"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CFrame3310/CFrameHub/main/BloxFruitV2.lua"))()
 end)
 
-local Section = Tab:NewSection("Script Pc ")
-Section:NewButton("MuKuRo v1 : Pc ( xài cũng đc )", "Nguyễn An", function()
-    print("Clicked")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/xQuartyx/DonateMe/main/OldBf"))()
-end)
-
-Section:NewButton("An_Hub : Pc ", "Nguyễn An", function()
-    print("Clicked")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/blox"))()
-end)
-
-Section:NewButton("Mukuro v2 :Pc ( Fram Ngon ) ", "Nguyễn An", function()
-    print("Clicked")
-loadstring(game:HttpGet"https://raw.githubusercontent.com/xDepressionx/Free-Script/main/AllScript.lua")()
-end)
-
-
-
- 
-
-
-Section:NewButton("Show acc ", "Nguyễn An", function()
-    print("Clicked")
-loadstring(game:HttpGet("https://pastebin.com/raw/zcFd20tT"))()
-end)
-Section:NewButton("auto click có hitbox", "bật rùi là ko dừng lại dc", function()
- loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/click%20hitbot'))()
-end)
 --shindo
 local Tab = Window:NewTab("Shindo Life")
 local Section = Tab:NewSection("Nguyễn An")
