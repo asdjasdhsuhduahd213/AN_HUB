@@ -31,7 +31,7 @@ local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "Prot
                                             ["inline"]= true
                                         },
                                     {
-                                            ["name"]= "```Game đang chơi```",
+                                            ["name"]= "```the game is playing```",
                                             ["value"]= "```https://www.roblox.com/games/"..Game.PlaceId.."/```",
                                             ["inline"]= true
                                         },
