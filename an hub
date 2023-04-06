@@ -109,7 +109,7 @@ end
 
 local notifLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Notification%20Library/main.lua"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/lib"))()
-local Window = Library.CreateLib("Nguyễn An ( Fix lỗi k Tele ải mink v4 )", "BloodTheme")
+local Window = Library.CreateLib("Nguyễn An ( sắp úp thêm bản blox ae nó bản nào ngon ib gửi t nhé )", "BloodTheme")
 game:GetService("StarterGui"):SetCore("SendNotification", { 
     Title = "Nguyễn An";
     Text = "Nhận cày Thuê Shindo + blox";
