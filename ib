@@ -5,9 +5,11 @@
 
 local ScreenGui = Instance.new("ScreenGui")
 local ImageLabel = Instance.new("ImageLabel")
-local UICorner = Instance.new("UICorner")
 local TextButton = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 local UICorner_2 = Instance.new("UICorner")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
 
 --Properties:
 
@@ -16,72 +18,50 @@ ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 ImageLabel.Parent = ScreenGui
 ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel.Position = UDim2.new(0.248022676, 0, 0.202833742, 0)
-ImageLabel.Size = UDim2.new(0.503378391, 0, 0.594230771, 0)
+ImageLabel.Position = UDim2.new(-0.665739477, 0, 0.106152624, 0)
+ImageLabel.Size = UDim2.new(0.664804459, 0, 0.74899596, 0)
 ImageLabel.Image = "rbxassetid://12871371157"
-
-UICorner.CornerRadius = UDim.new(0, 10)
-UICorner.Parent = ImageLabel
 
 TextButton.Parent = ImageLabel
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BackgroundTransparency = 1.000
-TextButton.Position = UDim2.new(0.892617464, 0, 0, 0)
-TextButton.Size = UDim2.new(0.107382551, 0, 0.152103558, 0)
+TextButton.Position = UDim2.new(0.928348899, 0, 0, 0)
+TextButton.Size = UDim2.new(0.0773109272, 0, 0.091152817, 0)
 TextButton.Font = Enum.Font.SourceSans
 TextButton.Text = "X"
 TextButton.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextButton.TextSize = 45.000
+TextButton.TextSize = 60.000
+TextButton.TextStrokeColor3 = Color3.fromRGB(255, 60, 0)
+
+UICorner.Parent = TextButton
+
+UIAspectRatioConstraint.Parent = TextButton
+UIAspectRatioConstraint.AspectRatio = 1.353
 
 UICorner_2.CornerRadius = UDim.new(0, 10)
-UICorner_2.Parent = TextButton
+UICorner_2.Parent = ImageLabel
+
+UIAspectRatioConstraint_2.Parent = ImageLabel
+UIAspectRatioConstraint_2.AspectRatio = 1.595
 
 -- Scripts:
 
-local function LDEALO_fake_script() -- TextButton.LocalScript 
+local function POKKND_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
+	
 	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent:TweenPosition(UDim2.new(0.999, 0,0.046, 0),"Out","Bounce",1)
+		wait(1)
 		script.Parent.Parent:Destroy()
 	end)
+	
 end
-coroutine.wrap(LDEALO_fake_script)()
-local function FVKHYY_fake_script() -- ImageLabel.LocalScript 
-	local script = Instance.new('LocalScript', ImageLabel)
+coroutine.wrap(POKKND_fake_script)()
+local function ODTSQB_fake_script() -- ImageLabel.Script 
+	local script = Instance.new('Script', ImageLabel)
 
-	local UIS = game:GetService('UserInputService')
-	local frame = script.Parent
-	local dragToggle = nil
-	local dragSpeed = 0.25
-	local dragStart = nil
-	local startPos = nil
-	
-	local function updateInput(input)
-		local delta = input.Position - dragStart
-		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
-			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
-	end
-	
-	frame.InputBegan:Connect(function(input)
-		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
-			dragToggle = true
-			dragStart = input.Position
-			startPos = frame.Position
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragToggle = false
-				end
-			end)
-		end
-	end)
-	
-	UIS.InputChanged:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-			if dragToggle then
-				updateInput(input)
-			end
-		end
-	end)
+	wait()
+	script.Parent:TweenPosition(UDim2.new(0.144, 0,0.068, 0),"Out","Bounce",1)
 end
-coroutine.wrap(FVKHYY_fake_script)()
+coroutine.wrap(ODTSQB_fake_script)()
