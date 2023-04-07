@@ -10,18 +10,12 @@ local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "Prot
                                     ["color"]= tonumber(0x7269da);
                                     
                                     ["fields"]= {
-                                        {
-                                           
-                                        },
-                                        {
-                                            
-                                        },
+
                                         {
                                             ["name"]= "Script Starus",
                                             ["value"]= "```Người dùng đang xem bảng giá cày thuê```",
                                             ["inline"]= true
-                                        },
-                                    {
+
                                            
                                         },
                                     }              
