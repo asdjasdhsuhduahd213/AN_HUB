@@ -115,7 +115,7 @@ end
 
 local notifLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Notification%20Library/main.lua"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/lib"))()
-local Window = Library.CreateLib(" Nguyễn An ( done Update script blox )", "BloodTheme")
+local Window = Library.CreateLib(" Nguyễn An ( Fix lỗi chạy nhanh )", "BloodTheme")
 game:GetService("StarterGui"):SetCore("SendNotification", { 
     Title = "Nguyễn An";
     Text = "Nhận cày Thuê Shindo + blox";
@@ -149,7 +149,7 @@ Section:NewButton("Show acc ( lỗi ) ", "Nguyễn An", function()
 loadstring(game:HttpGet("https://pastebin.com/raw/zcFd20tT"))()
 end)
 
-Section:NewToggle("chạy nhanh đến nổ máy", "....", function(state)
+Section:NewToggle("chạy nhanh đến nổ máy ( lỗi )", "....", function(state)
  if state then
           InfAbility = state
         if state == false then
