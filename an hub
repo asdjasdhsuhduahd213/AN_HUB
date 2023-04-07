@@ -528,13 +528,19 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
     Icon = "rbxthumb://type=Asset&id=11749957186&w=150&h=150"})
     Duration = 5;
  end)
- local Section = Tab:NewSection("Đóng góp ý kiến về script")
- Section:NewButton("Nơi đóng góp   ", ":3", function()
- print("Clicked")
-   setclipboard('https://www.facebook.com/nguyenanutgr')
-   game:GetService("StarterGui"):SetCore("SendNotification", { 
+ 
+ local Section = Tab:NewSection("Nơi Bán acc uy tín")
+Section:NewButton("Bảng Giá acc   ", ":3", function()
+print("Clicked")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/lklklkl/main/sell%20acc'))()
+setclipboard('https://www.facebook.com/nguyenanutgr')
+game:GetService("StarterGui"):SetCore("SendNotification", { 
     Title = "Nguyễn An";
-    Text = "Đã Sao chép link fb";
+    Text = "Hack Ngon không";
+    Button1 = "Ngon";
+    Button2 = "đéo";
     Icon = "rbxthumb://type=Asset&id=11749957186&w=150&h=150"})
     Duration = 5;
-   end)
+    
+ 
+end)
