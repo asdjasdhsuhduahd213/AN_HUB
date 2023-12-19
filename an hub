@@ -11992,10 +11992,10 @@ end)
  end
 
 function UpdateIslandESP()
- for i,v in pairs(game:GetService("Workspace")["_WorldOrigin"].Locations["Haunted Castle"]:GetChildren()) do
+ for i,v in pairs(game:GetService("Workspace")["_WorldOrigin"].Locations:GetChildren()) do
  pcall(function()
   if IslandESP then
-  if v.Name ~= "Sea" then
+  if v.Name ~= "Castle on the Sea" then
   if not v:FindFirstChild('NameEsp') then
   local bill = Instance.new('BillboardGui',v)
   bill.Name = 'NameEsp'
