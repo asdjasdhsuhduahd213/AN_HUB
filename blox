@@ -11992,7 +11992,7 @@ end)
  end
 
 function UpdateIslandESP()
- for i,v in pairs(game:GetService("Workspace")["_WorldOrigin"].Locations["Haunted Castle"]:GetChildren()) do
+ for i,v in pairs(game:GetService("Workspace")["_WorldOrigin"].Locations["Castle on the Sea"]:GetChildren()) do
  pcall(function()
   if IslandESP then
   if v.Name ~= "Sea" then
@@ -12357,7 +12357,7 @@ if World2 then
 			UpdateFlowerChams() 
 		end
 	end)
-	 DevilFruit:AddToggle("ESP Island",IslandESP,function(value)
+	 DevilFruit:Toggle("ESP Island",false,function(value)
         IslandESP = value
         while IslandESP do wait()
             UpdateIslandESP() 
