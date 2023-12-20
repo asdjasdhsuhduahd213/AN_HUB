@@ -11992,7 +11992,7 @@ end)
  end
 
 function UpdateIslandESP()
- for i,v in pairs(game:GetService("Workspace")["_WorldOrigin"].Locations:GetChildren()) do
+ for i,v in pairs(game:GetService("Workspace").Map:GetChildren()) do
  pcall(function()
   if IslandESP then
   if v.Name ~= "Castle on the Sea" then
@@ -13861,7 +13861,6 @@ end)
 
 wait(4)
 loadstring(game:HttpGet('https://raw.githubusercontent.com/hub5144/1/main/2'))()
-
 
 
 
