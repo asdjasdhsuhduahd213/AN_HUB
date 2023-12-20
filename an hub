@@ -12366,8 +12366,8 @@ if World2 then
         end
     end)
 
-DevilFruit:Toggle("4",false,function(value)
-        _G.tpkit = value
+DevilFruit:Toggle("6",false,function(value)
+       _G.tpkit = value 
         StopTween(_G.tpkit)
     end)
 
