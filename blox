@@ -12366,7 +12366,7 @@ if World2 then
         end
     end)
 
-DevilFruit:Toggle("1",false,function(value)
+DevilFruit:Toggle("2",false,function(value)
        _G.tpkit = value 
         StopTween(_G.tpkit)
     end)
@@ -12387,7 +12387,7 @@ end)
 
  spawn(function()
  while wait() do
- for _,v in next, workspace.EmberTemplate:GetDescendants() do
+for _,v in next, workspace.EmberTemplate:GetDescendants() do
 if _G.tpkit then
     if v.Name == "Part" then
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
