@@ -11992,10 +11992,10 @@ end)
  end
 
 function UpdateIslandESP()
-    for i, v in pairs(game:GetService("Workspace").Map["Boat Castle"].RaidSummon2.Button:GetChildren()) do
+    for i, v in pairs(game:GetService("Workspace").Map.KitsuneIsland.ShrineActive:GetChildren()) do
         pcall(function()
             if IslandESP then
-                if v.Name ~= "Main" then
+                if v.Name ~= "NeonShrinePart" then
                     if not v:FindFirstChild('IslandESP') then
                         local bill = Instance.new('BillboardGui', v)
                         bill.Name = 'IslandESP'
@@ -12012,8 +12012,10 @@ function UpdateIslandESP()
                         name.BackgroundTransparency = 1
                         name.TextStrokeTransparency = 0.5
                         name.TextColor3 = Color3.fromRGB(80, 245, 245)
-                       v['IslandESP'].TextLabel.Text = (name.Text ..'   \n'.. round((game:GetService('Players').LocalPlayer.Character.Head.Position - v.Position).Magnitude/3) ..' M')
-                        name.Text = "master"
+                        -- Thay đổi văn bản hiển thị thành "123"
+                        name.Text = "Kitsune Island"
+                    else
+                        v['IslandESP'].TextLabel.Text = "Kitsune Island"
                     end
                 end
             else
@@ -12357,12 +12359,26 @@ if World2 then
 			UpdateFlowerChams() 
 		end
 	end)
-	 DevilFruit:Toggle("ESP Island",false,function(value)
+ DevilFruit:Toggle("ESP Island",false,function(value)
         IslandESP = value
         while IslandESP do wait()
             UpdateIslandESP() 
         end
     end)
+
+DevilFruit:Toggle("Tp",false,function(value)
+        tpkit = value
+        while tpkit do
+    for _,v in next, workspace.Map.KitsuneIsland.ShrineActive:GetDescendants() do
+    if v.Name:find("ShrineActive") then
+                           topos(v.CFrame)
+end
+end   
+            
+        end
+    end)
+
+
  
  Shop:Seperator(" Abilities ")
  
@@ -13861,7 +13877,6 @@ end)
 
 wait(4)
 loadstring(game:HttpGet('https://raw.githubusercontent.com/hub5144/1/main/2'))()
-
 
 
 
