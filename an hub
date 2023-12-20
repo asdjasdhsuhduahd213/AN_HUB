@@ -12366,15 +12366,16 @@ if World2 then
         end
     end)
 
-DevilFruit:Toggle("2",false,function(value)
+DevilFruit:Toggle("4",false,function(value)
         _G.tpkit = value
+        StopTween(_G.tpkit)
     end)
 
  spawn(function()
  while wait() do
 for _,v in next, workspace.Map.KitsuneIsland.ShrineActive:GetDescendants() do
 if _G.tpkit then
-    if v.Name:find("ShrineActive") then
+    if v.Name:find("NeonShrinePart") then
                            topos(v.CFrame)
 end
 end
