@@ -12012,10 +12012,8 @@ function UpdateIslandESP()
                         name.BackgroundTransparency = 1
                         name.TextStrokeTransparency = 0.5
                         name.TextColor3 = Color3.fromRGB(80, 245, 245)
-                        -- Thay đổi văn bản hiển thị thành "123"
-                        name.Text = "123"
-                    else
-                        v['IslandESP'].TextLabel.Text = (master ..'   \n'.. round((game:GetService('Players').LocalPlayer.Character.Head.Position - v.Position).Magnitude/3) ..' M')
+                       v['IslandESP'].TextLabel.Text = (name.Text ..'   \n'.. round((game:GetService('Players').LocalPlayer.Character.Head.Position - v.Position).Magnitude/3) ..' M')
+                        name.Text = "master"
                     end
                 end
             else
