@@ -12366,10 +12366,9 @@ if World2 then
         end
     end)
 
-DevilFruit:Toggle("5",false,function(value)
-       if not _G.tpkit == value then
+DevilFruit:Toggle("6",false,function(value)
+       _G.tpkit = value 
         StopTween(_G.tpkit)
-        end
     end)
 
  spawn(function()
@@ -12378,11 +12377,26 @@ for _,v in next, workspace.Map.KitsuneIsland.ShrineActive:GetDescendants() do
 if _G.tpkit then
     if v.Name:find("NeonShrinePart") then
                            topos(v.CFrame)
-end
+                           end
 end
 end
 end
 end)
+
+
+
+ spawn(function()
+ while wait(1) do
+ for _,v in next, workspace.EmberTemplate:GetDescendants() do
+if _G.tpkit then
+    if v.Name == "Part" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+    end
+end
+end
+end
+end)
+
 
  Shop:Seperator(" Abilities ")
  
