@@ -12386,7 +12386,7 @@ end)
 
 
  spawn(function()
- while wait(1) do
+ while wait() do
  for _,v in next, workspace.EmberTemplate:GetDescendants() do
 if _G.tpkit then
     if v.Name == "Part" then
