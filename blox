@@ -12366,7 +12366,7 @@ if World2 then
         end
     end)
 
-DevilFruit:Toggle("4", false, function(value)
+DevilFruit:Toggle("1", false, function(value)
     _G.tpkit = value
     StopTween(_G.tpkit)
 end)
@@ -12389,7 +12389,8 @@ spawn(function()
                         local humanoidRootPart = game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
 
                         if humanoidRootPart then
-                            humanoidRootPart.CFrame = CFrame.new(Vector3.new(0, 0, 7))
+                            -- Điều chỉnh vị trí đứng của nhân vật với NeonShrinePart là 7 đơn vị phía trước
+                            humanoidRootPart.CFrame = CFrame.new(Vector3.new(0, 0,0.9))
                         end
                     end
                 end
@@ -12397,6 +12398,7 @@ spawn(function()
         end
     end
 end)
+
 
 
 
@@ -12410,27 +12412,19 @@ end)
 spawn(function()
     while true do
         wait()
-
         if _G.lumlinhhon then
-            local emberTemplate = game:GetService("Workspace").EmberTemplate
-            local player = game.Players.LocalPlayer
-
-            for _, v in pairs(emberTemplate:GetDescendants()) do
-                if v:IsA("BasePart") and v.Name == "Part" then
-                    local humanoidRootPart = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
-
-                    if humanoidRootPart then
-                        local destination = v.CFrame.Position
-                        player.Character:MoveTo(destination)
-                    end
-                end
-            end
-        end
+for _,v in next, workspace.EmberTemplate:GetDescendants() do
+    if v.Name == "Part" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+    end
+end
+end
     end
 end)
 
 
-Shop:Button("Soul trading)",function()
+
+DevilFruit:Button("Soul trading)",function()
 game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RF/KitsuneStatuePray"):InvokeServer()
  end)
 
