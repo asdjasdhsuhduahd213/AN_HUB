@@ -12366,7 +12366,7 @@ if World2 then
         end
     end)
 
-DevilFruit:Toggle("1", false, function(value)
+DevilFruit:Toggle("4", false, function(value)
     _G.tpkit = value
     StopTween(_G.tpkit)
 end)
@@ -12386,22 +12386,14 @@ spawn(function()
             if shrineActive then
                 for _, v in pairs(shrineActive:GetDescendants()) do
                     if v:IsA("BasePart") and v.Name:find("NeonShrinePart") then
-                        local humanoidRootPart = game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
-
-                        if humanoidRootPart then
-                            -- Đặt khoảng cách đứng là 5 đơn vị phía trước "NeonShrinePart"
-                            local distance = 10
-                            local newPosition = v.Position + v.CFrame.LookVector * distance
-
-                            -- Di chuyển vị trí đứng của nhân vật đến newPosition
-                            topos(newPosition)
-                        end
+                        topos(v.CFrame)
                     end
                 end
             end
         end
     end
 end)
+
 
 
 
