@@ -12366,40 +12366,57 @@ if World2 then
         end
     end)
 
-DevilFruit:Toggle("3",false,function(value)
-       _G.tpkit = value 
-        StopTween(_G.tpkit)
-    end)
+DevilFruit:Toggle("4", false, function(value)
+    _G.tpkit = value
+    StopTween(_G.tpkit)
+end)
 
- spawn(function()
- while wait() do
-if _G.tpkit then
-for _,v in next, workspace.Map.KitsuneIsland.ShrineActive:GetDescendants() do
-if game:GetService("Workspace").Map:FindFirstChild("KitsuneIsland") then
-if v.Name:find("NeonShrinePart") then
-                           topos(v.CFrame)
-  end                         end                       
-end
-end
-end
+spawn(function()
+    local kitsuneIsland
+
+    while not kitsuneIsland do
+        kitsuneIsland = game:GetService("Workspace").Map:FindFirstChild("KitsuneIsland")
+        wait(1)
+    end
+
+    while wait() do
+        if _G.tpkit then
+            local shrineActive = kitsuneIsland:FindFirstChild("ShrineActive")
+
+            if shrineActive then
+                for _, v in pairs(shrineActive:GetDescendants()) do
+                    if v:IsA("BasePart") and v.Name:find("NeonShrinePart") then
+                        topos(v.CFrame)
+                    end
+                end
+            end
+        end
+    end
 end)
 
 
-DevilFruit:Toggle("kid",false,function(value)
-       _G.lumlinhhon = value 
-        StopTween(_G.lumlinhhon)
-    end)
- spawn(function()
- while wait() do
-     if _G.lumlinhhon then
-         game:GetService('RunService').RenderStepped:connect(function() 
-      if game:GetService("Workspace").EmberTemplate:FindFirstChild("Part") then
-     TPchest( game:GetService("Workspace"):FindFirstChild("Part").CFrame)
-     end
+
+
+DevilFruit:Toggle("kid", false, function(value)
+    _G.lumlinhhon = value
+    StopTween(_G.lumlinhhon)
 end)
-end
-end
+
+spawn(function()
+    while true do
+        wait()
+
+        if _G.lumlinhhon then
+            local emberTemplate = game:GetService("Workspace").EmberTemplate
+
+            if emberTemplate:FindFirstChild("Part") then
+                local part = emberTemplate.Part
+                TPchest(part.CFrame)
+            end
+        end
+    end
 end)
+
 
 
  Shop:Seperator(" Abilities ")
