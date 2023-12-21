@@ -12366,18 +12366,16 @@ if World2 then
         end
     end)
 
-DevilFruit:Toggle("1",false,function(value)
+DevilFruit:Toggle("2",false,function(value)
        _G.tpkit = value 
         StopTween(_G.tpkit)
     end)
 
  spawn(function()
  while wait() do
-for _,v in next, workspace.Map.KitsuneIsland.ShrineActive:GetDescendants() do
 if _G.tpkit then
-    if v.Name:find("NeonShrinePart") then
-                           topos(v.CFrame)
-                           end
+if game:GetService("Workspace").Map:FindFirstChild("KitsuneIsland") then
+                           topos(game:GetService("Workspace").Map.KitsuneIsland.ShrineActive:FindFirstChild("NeonShrinePart").HumanoidRootPart.CFrame * CFrame.new(0,0,5))
 end
 end
 end
@@ -12390,13 +12388,13 @@ DevilFruit:Toggle("kid",false,function(value)
     end)
  spawn(function()
  while wait() do
-     for _,v in next, workspace.EmberTemplate:GetDescendants() do
-if _G.lumlinhhon then
-    if v.Name == "Part" then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
-    end
+game:GetService('RunService').RenderStepped:connect(function()           
+     if _G.chestsea3 then
+      if game:GetService("Workspace").EmberTemplate:FindFirstChild("Part") then
+     TPchest( game:GetService("Workspace"):FindFirstChild("Part").CFrame)
+     end
 end
-end
+end)
 end
 end)
 
