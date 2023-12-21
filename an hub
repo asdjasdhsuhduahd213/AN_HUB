@@ -12366,7 +12366,7 @@ if World2 then
         end
     end)
 
-DevilFruit:Toggle("2", false, function(value)
+DevilFruit:Toggle("3", false, function(value)
     _G.tpkit = value
     StopTween(_G.tpkit)
 end)
@@ -12386,7 +12386,7 @@ spawn(function()
             if shrineActive then
                 for _, v in pairs(shrineActive:GetDescendants()) do
                     if v:IsA("BasePart") and v.Name:find("NeonShrinePart") then
-                        topos(v.CFrame.X + 10)
+                        topos(v.CFrame.Position.x + 10)
                     end
                 end
             end
