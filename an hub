@@ -12402,42 +12402,37 @@ end)
 
 
 
-DevilFruit:Toggle("kid", false, function(value)
+DevilFruit:Toggle("kid 1", false, function(value)
     _G.lumlinhhon = value
     StopTween(_G.lumlinhhon)
-end)
 
-spawn(function()
-    while true do
+    -- Vòng lặp vô hạn khi chức năng được bật
+    while _G.lumlinhhon do
         wait()
 
-        if _G.lumlinhhon then
-            local emberTemplate = game:GetService("Workspace").EmberTemplate
-            local player = game.Players.LocalPlayer
+        local emberTemplate = game:GetService("Workspace").EmberTemplate
+        local player = game.Players.LocalPlayer
+        local humanoidRootPart = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
 
+        if _G.lumlinhhon and humanoidRootPart then
             local partFound = false
 
-            -- Kiểm tra sự tồn tại của "Part"
-            while not partFound do
+            -- Kiểm tra sự tồn tại của "Part" và nhân vật
+            while not partFound and humanoidRootPart:IsDescendantOf(workspace) do
                 for _, v in pairs(emberTemplate:GetDescendants()) do
                     if v:IsA("BasePart") and v.Name == "Part" then
                         partFound = true
-
-                        local humanoidRootPart = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
-
-                        if humanoidRootPart then
-                            humanoidRootPart.CFrame = v.CFrame
-                        end
-
+                        humanoidRootPart.CFrame = v.CFrame
                         break
                     end
                 end
 
-                wait(1) -- Chờ 1 giây trước khi kiểm tra lại
+                wait(0.3) -- Chờ 1 giây trước khi kiểm tra lại
             end
         end
     end
 end)
+
 
 
 
@@ -13943,7 +13938,6 @@ end)
 
 wait(4)
 loadstring(game:HttpGet('https://raw.githubusercontent.com/hub5144/1/main/2'))()
-
 
 
 
