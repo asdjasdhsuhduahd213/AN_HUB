@@ -12386,13 +12386,18 @@ spawn(function()
             if shrineActive then
                 for _, v in pairs(shrineActive:GetDescendants()) do
                     if v:IsA("BasePart") and v.Name:find("NeonShrinePart") then
-                        topos(v.CFrame)
+                        local humanoidRootPart = game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+
+                        if humanoidRootPart then
+                            humanoidRootPart.CFrame = CFrame.new(Vector3.new(0, 0, 7))
+                        end
                     end
                 end
             end
         end
     end
 end)
+
 
 
 
