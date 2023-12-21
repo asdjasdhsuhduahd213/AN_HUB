@@ -12366,38 +12366,87 @@ if World2 then
         end
     end)
 
-DevilFruit:Toggle("2",false,function(value)
-       _G.tpkit = value 
-        StopTween(_G.tpkit)
-    end)
+DevilFruit:Toggle("5", false, function(value)
+    _G.tpkit = value
+    StopTween(_G.tpkit)
+end)
 
- spawn(function()
- while wait() do
-if _G.tpkit then
-if game:GetService("Workspace").Map:FindFirstChild("KitsuneIsland") then
-                           topos(game:GetService("Workspace").Map.KitsuneIsland.ShrineActive:FindFirstChild("NeonShrinePart").HumanoidRootPart.CFrame * CFrame.new(0,0,5))
-end
-end
-end
+spawn(function()
+    local kitsuneIsland
+
+    while not kitsuneIsland do
+        kitsuneIsland = game:GetService("Workspace").Map:FindFirstChild("KitsuneIsland")
+        wait(1)
+    end
+
+    while wait() do
+        if _G.tpkit then
+            local shrineActive = kitsuneIsland:FindFirstChild("ShrineActive")
+
+            if shrineActive then
+                for _, v in pairs(shrineActive:GetDescendants()) do
+                    if v:IsA("BasePart") and v.Name:find("NeonShrinePart") then
+                        local humanoidRootPart = game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+
+                        if humanoidRootPart then
+                            -- Điều chỉnh vị trí đứng của nhân vật với NeonShrinePart là 7 đơn vị phía trước
+                            humanoidRootPart.CFrame = CFrame.new(Vector3.new(0, 0, 7))
+                        end
+                    end
+                end
+            end
+        end
+    end
 end)
 
 
-DevilFruit:Toggle("kid",false,function(value)
-       _G.lumlinhhon = value 
-        StopTween(_G.lumlinhhon)
-    end)
- spawn(function()
- while wait() do
-game:GetService('RunService').RenderStepped:connect(function()           
-     if _G.chestsea3 then
-      if game:GetService("Workspace").EmberTemplate:FindFirstChild("Part") then
-     TPchest( game:GetService("Workspace"):FindFirstChild("Part").CFrame)
-     end
-end
-end)
-end
+
+
+
+
+DevilFruit:Toggle("kid", false, function(value)
+    _G.lumlinhhon = value
+    StopTween(_G.lumlinhhon)
 end)
 
+spawn(function()
+    while true do
+        wait()
+
+        if _G.lumlinhhon then
+            local emberTemplate = game:GetService("Workspace").EmberTemplate
+            local player = game.Players.LocalPlayer
+
+            local partFound = false
+
+            -- Kiểm tra sự tồn tại của "Part"
+            while not partFound do
+                for _, v in pairs(emberTemplate:GetDescendants()) do
+                    if v:IsA("BasePart") and v.Name == "Part" then
+                        partFound = true
+
+                        local humanoidRootPart = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+
+                        if humanoidRootPart then
+                            local destination = v.Position
+                            player.Character:MoveTo(destination)
+                        end
+
+                        break
+                    end
+                end
+
+                wait(1)
+            end
+        end
+    end
+end)
+
+
+
+DevilFruit:Button("Soul trading)",function()
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RF/KitsuneStatuePray"):InvokeServer()
+ end)
 
  Shop:Seperator(" Abilities ")
  
