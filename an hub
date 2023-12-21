@@ -12366,7 +12366,7 @@ if World2 then
         end
     end)
 
-DevilFruit:Toggle("3", false, function(value)
+DevilFruit:Toggle("4", false, function(value)
     _G.tpkit = value
     StopTween(_G.tpkit)
 end)
@@ -12386,13 +12386,15 @@ spawn(function()
             if shrineActive then
                 for _, v in pairs(shrineActive:GetDescendants()) do
                     if v:IsA("BasePart") and v.Name:find("NeonShrinePart") then
-                        topos(v.CFrame.Position.x + 10)
+                        topos(v.CFrame)
                     end
                 end
             end
         end
     end
 end)
+
+
 
 
 
@@ -12408,15 +12410,35 @@ end)
 spawn(function()
     while true do
         wait()
+
         if _G.lumlinhhon then
-for _,v in next, workspace.EmberTemplate:GetDescendants() do
-    if v.Name == "Part" then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
-    end
-end
-end
+            local emberTemplate = game:GetService("Workspace").EmberTemplate
+            local player = game.Players.LocalPlayer
+
+            local partFound = false
+
+            -- Kiểm tra sự tồn tại của "Part"
+            while not partFound do
+                for _, v in pairs(emberTemplate:GetDescendants()) do
+                    if v:IsA("BasePart") and v.Name == "Part" then
+                        partFound = true
+
+                        local humanoidRootPart = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+
+                        if humanoidRootPart then
+                            humanoidRootPart.CFrame = v.CFrame
+                        end
+
+                        break
+                    end
+                end
+
+                wait(1) -- Chờ 1 giây trước khi kiểm tra lại
+            end
+        end
     end
 end)
+
 
 
 
