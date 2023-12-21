@@ -12389,8 +12389,12 @@ spawn(function()
                         local humanoidRootPart = game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
 
                         if humanoidRootPart then
-                            -- Điều chỉnh vị trí đứng của nhân vật với NeonShrinePart là 7 đơn vị phía trước
-                            humanoidRootPart.CFrame = CFrame.new(Vector3.new(0, 0,0.9))
+                            -- Đặt khoảng cách đứng là 5 đơn vị phía trước "NeonShrinePart"
+                            local distance = 10
+                            local newPosition = v.Position + v.CFrame.LookVector * distance
+
+                            -- Di chuyển vị trí đứng của nhân vật đến newPosition
+                            topos(newPosition)
                         end
                     end
                 end
@@ -12398,6 +12402,8 @@ spawn(function()
         end
     end
 end)
+
+
 
 
 
