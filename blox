@@ -12408,16 +12408,26 @@ spawn(function()
 
         if _G.lumlinhhon then
             local emberTemplate = game:GetService("Workspace").EmberTemplate
+            local player = game.Players.LocalPlayer
 
-            if emberTemplate:FindFirstChild("Part") then
-                local part = emberTemplate.Part
-                TPchest(part.CFrame)
+            for _, v in pairs(emberTemplate:GetDescendants()) do
+                if v:IsA("BasePart") and v.Name == "Part" then
+                    local humanoidRootPart = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+
+                    if humanoidRootPart then
+                        local destination = v.CFrame.Position
+                        player.Character:MoveTo(destination)
+                    end
+                end
             end
         end
     end
 end)
 
 
+Shop:Button("Soul trading)",function()
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RF/KitsuneStatuePray"):InvokeServer()
+ end)
 
  Shop:Seperator(" Abilities ")
  
